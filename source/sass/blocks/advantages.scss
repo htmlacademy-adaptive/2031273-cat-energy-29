@@ -1,0 +1,14 @@
+.advantages {
+  padding: 0 20px 49px 20px;
+  text-align: left;
+}
+
+.advantages__description {
+  color: $dark-gray;
+  font-family: "Lato", sans-serif;
+  margin: 0 0 26px 0;
+}
+
+.advantages__description:last-child {
+  margin-bottom: 0;
+}

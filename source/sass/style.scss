@@ -1,6 +1,11 @@
-@import "common/global";
-@import "common/fonts";
-@import "common/variables";
-@import "common/visually-hidden";
-@import "common/button";
-@import "common/title";
+@import "common/variables.scss";
+@import "common/global.scss";
+@import "common/fonts.scss";
+@import "common/visually-hidden.scss";
+@import "common/button.scss";
+@import "common/title.scss";
+@import "blocks/main-header.scss";
+@import "blocks/programs.scss";
+@import "blocks/advantages.scss";
+@import "blocks/example.scss";
+@import "blocks/main-footer.scss";
