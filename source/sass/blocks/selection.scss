@@ -1,0 +1,160 @@
+.selection__wrapper {
+  padding: 27px 20px 20px 20px;
+  border-top: solid 1px #D9D9D9;
+}
+
+.selection__title {
+  font-size: 36px;
+  line-height: 36px;
+  margin: 0 0 37px 0;
+  font-weight: 400;
+}
+
+.selection__description {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.fields__set {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.fields__set-personal {
+  padding: 20px 20px 24px 20px;
+}
+
+.fields__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fields__label {
+  display: flex;
+  margin-bottom: 14px;
+  align-items: center;
+}
+
+.fields__label:last-child {
+  margin-bottom: 0;
+}
+
+.fields__title {
+  margin-right: 13px;
+  font-size: 16px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: $dark-gray;
+}
+
+.fields__text-field {
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  border: 1px solid #E7E7E7;
+  text-transform: uppercase;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  min-height: 45px;
+}
+
+.fields__set-program {
+  padding: 22px 20px 19px 20px;
+  border-top: 1px solid #E7E7E7;
+  border-bottom: 1px solid #E7E7E7;
+}
+
+.fields__set-program .fields__text-field {
+  padding: 0;
+  margin: 0 15px 0 0;
+  width: 30px;
+  height: 30px;
+}
+
+.fields__set-program .fields__label {
+  margin: 0;
+  padding: 0;
+}
+
+.fields__set-contacts {
+  padding: 26px 20px 10px 20px;
+}
+
+.fields__set h2 {
+  margin: 0;
+  padding-top: 26px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.fields__set-comments {
+  padding: 14px 20px 10px 20px;
+}
+
+.fields__set-comments .fields__label {
+  margin: 0;
+}
+
+.fields__set-comments h2 {
+  padding-top: 24px;
+  margin-bottom: 38px;
+}
+
+.fields__text-area {
+  padding: 14px;
+  width: 100%;
+  min-height: 150px;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.fields__set-additionally {
+  padding: 13px 20px 17px 20px;
+}
+
+.fields__set-additionally h2 {
+  padding-top: 23px;
+  margin-bottom: 36px;
+}
+
+.fields__set-additionally .fields__text-field {
+  padding: 0;
+  margin: 0 15px 0 0;
+  width: 30px;
+  height: 30px;
+}
+
+.fields__button-container {
+  padding: 17px 20px 32px 20px;
+  text-align: center;
+}
+
+.fields__button {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: $basic-green;
+  color: $basic-white;
+  padding: 10px 79px;
+  margin-bottom: 21px;
+  border: 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.fields__note {
+  display: block;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.cooperation__wrapper--secondary {
+  background-color: #F2F2F2;
+}
