@@ -90,15 +90,49 @@ a {
 }
 
 .welcome {
+  height: 480px;
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+}
+.welcome::before {
+  content: "";
+  background-image: url("../img/index/index-background-mobile.jpg");
+  background-color: #64a83b;
+  background-size: 320px 303px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  height: 305px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.welcome::after {
+  content: "";
+  background-image: url("../img/hero-img.png");
+  background-repeat: no-repeat;
+  background-size: 280px;
+  background-position: center;
+  position: absolute;
+  height: 271px;
+  width: 280px;
+  top: 170px;
+  left: 50%;
+  margin-left: -140px;
+  z-index: 2;
+}
+
+.welcome__wrapper {
+  padding: 20px 20px 0 20px;
+  text-align: center;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   align-items: center;
-  text-align: center;
-  padding: 27px 20px 0 19px;
-  background-image: url("../img/index/index-background-mobile.jpg");
-  background-size: 100% 305px;
-  background-position: center top;
-  background-repeat: no-repeat;
+  z-index: 3;
+  position: relative;
 }
 
 .welcome__title {
@@ -123,6 +157,8 @@ a {
   padding: 11px 74px;
   text-transform: uppercase;
   border: 0;
+  white-space: nowrap;
+  margin-top: auto;
 }
 
 .programs {
@@ -227,6 +263,7 @@ a {
 
 .cooperation__wrapper {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   text-align: left;
   padding: 26px 20px 26px 20px;
@@ -512,7 +549,8 @@ a {
 }
 
 .product-card__button {
-  width: 100%;
+  text-align: center;
+  display: block;
 }
 
 .product-card--empty {
@@ -535,7 +573,6 @@ a {
 .button--secondary {
   background-color: #f2f2f2;
   color: #444444;
-  font-style: normal;
 }
 
 .add-catalog__title {
@@ -597,8 +634,8 @@ a {
   min-height: 290px;
   background-color: #68b738;
   background-image: url("../img/catalog/gift-photo-mobile.jpg");
-  background-size: 100% 100%;
-  background-position: center center;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
