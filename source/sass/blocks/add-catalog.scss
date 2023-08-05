@@ -57,8 +57,8 @@
   min-height: 290px;
   background-color: $basic-green;
   background-image: url("../img/catalog/gift-photo-mobile.jpg");
-  background-size: 100% 100%;
-  background-position: center center;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
