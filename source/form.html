@@ -8,25 +8,28 @@
 </head>
 <body class="page__body">
 <header class="main-header">
-  <a class="main-header__logo" href="#" aria-current="page">
-    <img class="main-header__logo-img" src="img/logo-mobile-main.svg" width="33" height="38" alt="Логотип функционального питания для котов Cat Energy">
-    <img class="main-header__logo-text" src="img/logo-mobile-second.svg" width="101" height="18" alt="Логотип функционального питания для котов Cat Energy">
-  </a>
-  <nav class="main-nav">
-    <button class="main-nav__toggle" type="button">
-      <span class="visually-hidden">Открыть меню</span>
-    </button>
-    <ul class="main-nav__list site-list visually-hidden">
-      <li class="site-list__item">
-        <a href="index.html">Главная</a>
-      </li>
-      <li class="site-list__item">
-        <a href="catalog.html">Каталог продукции</a>
-      </li>
-      <li class="site-list__item site-list__item--current">
-        <a href="#" aria-current="page">Подбор программы</a>
-      </li>
-    </ul>
+  <nav class="main-header__menu">
+    <a class="menu__logo" href="#" aria-current="page">
+      <img class="menu__logo-img" src="img/logo-mobile-main.svg" width="33" height="38" alt="Логотип функционального питания для котов Cat Energy">
+      <img class="menu__logo-text" tabindex="-1" src="img/logo-mobile-second.svg" width="101" height="18" alt="Логотип функционального питания для котов Cat Energy">
+    </a>
+    <input class="menu__checkbox" type="checkbox" id="checkbox">
+    <label class="menu__button" for="checkbox">
+      <span class="menu__icon"></span>
+    </label>
+    <div class="menu__container">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link" href="index.html">Главная</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="menu__item menu__item--current">
+          <a class="menu__link" href="#" aria-current="page">Подбор программы</a>
+        </li>
+      </ul>
+    </div>
   </nav>
 </header>
 <main class="main-container">

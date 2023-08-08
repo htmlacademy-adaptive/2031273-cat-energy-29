@@ -1,22 +1,131 @@
-.main-header {
-  padding: 12px 20px;
+.main-header__menu {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 21px;
+  top: 0;
+  background-color: $basic-white;
+  left: 0;
+  right: 0;
+  height: 66px;
+  z-index: 4;
   position: relative;
 }
 
-.main-header__logo-text {
+.menu__logo-text {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 160px;
   transform: translate(-50%, -50%);
 }
 
-.site-list__item a {
+.menu__button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 30px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.menu__icon {
+  display: block;
+  position: relative;
+  background-color: $basic-black;
+  width: 90%;
+  height: 2px;
+  transition: .4s;
+  &::after, &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: $basic-black;
+    width: 100%;
+    height: 2px;
+    transition: .4s;
+  }
+}
+
+.menu__icon::after {
+  top: 8px;
+}
+
+.menu__icon::before {
+  top: -8px;
+}
+
+.menu__container {
+  position: fixed;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 65px;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  height: 0;
+  opacity: 1;
+  transition: .5s;
+  overflow: hidden;
+  background-color: $basic-white;
+}
+
+.menu__list {
+  transition: .5s;
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.menu__item {
+  font-size: 26px;
+  width: 100%;
+  padding: 22px 20px 22px 20px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.menu__link {
+  text-decoration: none;
+  text-transform: uppercase;
   color: $basic-black;
   font-size: 20px;
   font-weight: 400;
   line-height: 20px;
-  text-transform: uppercase;
+  width: 100%;
+}
+
+.menu__checkbox {
+  display: none;
+}
+
+.menu__checkbox:checked ~ .mobile-menu__nav {
+  opacity: 1;
+}
+
+.menu__checkbox:checked ~ .menu__container {
+  height: 200px;
+}
+
+.menu__checkbox:checked ~ .menu__button .menu__icon {
+  background: transparent;
+}
+
+.menu__checkbox:checked ~ .menu__button .menu__icon::before, .menu__checkbox:checked ~ .menu__button .menu__icon::after {
+  top: 0;
+}
+
+.menu__checkbox:checked ~ .menu__button .menu__icon::after {
+  transform: rotate(-45deg);
+  left: 5px;
+  -webkit-transform: rotate(-45deg);
+}
+
+.menu__checkbox:checked ~ .menu__button .menu__icon::before {
+  transform: rotate(45deg);
+  left: 5px;
+  -webkit-transform: rotate(45deg);
 }

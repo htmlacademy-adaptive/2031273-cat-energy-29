@@ -65,9 +65,10 @@
 .button-link {
   background-color: $basic-green;
   color: $basic-white;
-  padding: 11px 74px;
+  padding: 11px 20px;
   text-transform: uppercase;
   border: 0;
   white-space: nowrap;
   margin-top: auto;
+  min-width: 280px;
 }

@@ -25,6 +25,7 @@
   padding: 20px 20px 24px 20px;
 }
 
+
 .fields__list {
   list-style-type: none;
   padding: 0;
@@ -127,6 +128,13 @@
   margin: 0 15px 0 0;
   width: 30px;
   height: 30px;
+}
+
+.fields__set-personal,
+.fields__set-contacts {
+  .fields__item:not(:last-child) {
+      margin-bottom: 14px;
+  }
 }
 
 .fields__button-container {
