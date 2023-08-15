@@ -1,5 +1,5 @@
 .welcome {
-  height: 480px;
+  min-height: 480px;
   display: flex;
   position: relative;
   justify-content: space-around;
@@ -35,6 +35,46 @@
   }
 }
 
+.welcome {
+  min-height: 480px;
+
+}
+
+@media (min-width: $tablet-width) {
+  .welcome {
+    min-height: 694px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .welcome {
+    &::before {
+      background-color: $basic-white;
+      background-image: none;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .welcome {
+    &::before {
+      content: "";
+      background-image: url("../img/index/index-background-mobile.jpg");
+      background-color: #64a83b;
+      background-size: 720px 694px;
+      background-repeat: no-repeat;
+      background-position: center left;
+      position: absolute;
+      width: 720px;
+      height: 694px;
+      top: 0;
+      left: auto;
+      right: 0;
+      z-index: 1;
+    }
+  }
+}
+
 .welcome__wrapper {
   padding: 20px 20px 0 20px;
   text-align: center;
@@ -46,6 +86,21 @@
   position: relative;
 }
 
+@media (min-width: $tablet-width) {
+  .welcome__wrapper {
+    text-align: left;
+    align-items: flex-start;
+    margin-left: 90px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .welcome__wrapper {
+    margin-left: 160px;
+    margin-top: 225px;
+  }
+}
+
 .welcome__title {
   width: 100%;
   color: $basic-white;
@@ -55,11 +110,23 @@
   margin: 0 0 25px 0;
 }
 
+@media (min-width: $tablet-width) {
+  .welcome__title {
+    color: $basic-black;
+  }
+}
+
 .welcome__subtitle {
   color: $basic-white;
   line-height: 14px;
   text-transform: uppercase;
   margin: 0  0 29px 0;
+}
+
+@media (min-width: $tablet-width) {
+  .welcome__subtitle {
+    color: $basic-black;
+  }
 }
 
 .button-link {
@@ -71,4 +138,16 @@
   white-space: nowrap;
   margin-top: auto;
   min-width: 280px;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .button-link {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 0;
+    padding: 18px 10px;
+    min-width: 244px;
+  }
 }

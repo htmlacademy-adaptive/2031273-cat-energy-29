@@ -2,6 +2,18 @@
   padding: 20px;
 }
 
+@media (min-width: $tablet-width) {
+  .programs  {
+    padding: 20px 30px 20px 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programs  {
+    padding: 82px 110px 71px 110px;
+  }
+}
+
 .programs-list {
   list-style-type: none;
   margin: 0;
@@ -11,18 +23,158 @@
   gap: 20px;
 }
 
+@media (min-width: $desktop-width) {
+.programs-list {
+  flex-direction: row;
+  justify-content: space-between;
+  }
+}
+
 .programs-list__item {
   background-color: #f2f2f2;
   padding: 24px 33px 18px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  &::before {
+    content: '';
+    background-color: #68B738;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+  }
+
+  &::after {
+    content: '';
+    background-image: url("../img/index/cat-slim.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.programs-list__item--pro {
+  &::after {
+    background-image: url("../img/index/cat-pro.svg");
+    width: 67px;
+    left: 10px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+.programs-list__item {
+  padding: 77px 63px 52px 20px;
+
+    &::before {
+      top: 50%;
+      right: 63px;
+      transform: translate(0, -50%);
+      width: 200px;
+      height: 200px;
+    }
+
+    &::after {
+      top: 45%;
+      right: 95px;
+      transform: translate(0, -50%);
+      width: 141px;
+      height: 194px;
+      background-image: url("../img/index/cat-slim-tablet.svg");
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programs-list__item {
+    min-width: 570px;
+    padding: 77px 60px 60px 52px;
+    &::before {
+      top: 47px;
+      left: 52px;
+      right: auto;
+      transform: translate(0, 0);
+      width: 100px;
+      height: 100px;
+    }
+
+    &::after {
+      top: 40px;
+      left: 70px;
+      right: auto;
+      transform: translate(0, 0);
+      width: 70px;
+      height: 97px;
+      background-image: url("../img/index/cat-slim-desktop.svg");
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .programs-list__item--pro {
+    &::after {
+      top: 50%;
+      left: auto;
+      right: 30px;
+      transform: translate(0, -50%);
+      width: 269px;
+      height: 112px;
+      background-image: url("../img/index/cat-pro-tablet.svg");
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programs-list__item--pro {
+    &::after {
+      top: 70px;
+      left: 36px;
+      right: auto;
+      width: 134px;
+      height: 56px;
+      transform: translate(0, 0);
+      background-image: url("../img/index/cat-pro-desktop.svg");
+    }
+  }
 }
 
 .programs-list__item-title {
-  margin: 0 0 29px 0;
+  margin: 5px 0 29px 70px;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
-  text-align: center;
   font-weight: 400;
+  position: relative;
+}
+
+@media (min-width: $tablet-width) {
+  .programs-list__item-title  {
+    margin: 5px 0 29px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programs-list__item-title  {
+    margin-left: 214px;
+    margin-bottom: 73px;
+  }
+}
+
+.programs-list__item--pro .programs-list__img {
+  background-image: url("../img/index/cat-pro.svg");
+}
+
+@media (min-width: $tablet-width) {
+  .programs-list__item-title  {
+    text-align: left;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .programs-list__item-subtitle {
@@ -33,6 +185,14 @@
   border-bottom: solid 1px $border-gray;
 }
 
+@media (min-width: $tablet-width) {
+  .programs-list__item-subtitle {
+    display: block;
+    width: 340px;
+    border-bottom: none;
+  }
+}
+
 .programs-list__item-link {
   background: transparent;
   color: $basic-black;
@@ -40,4 +200,18 @@
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
+  text-align: left;
+  min-width: auto;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 32px;
+    height: 10px;
+    top: 50%;
+    left: 102px;
+    transform: translateY(-50%);
+    background-image: url("../img/index/icon_arrow.svg");
+  }
 }

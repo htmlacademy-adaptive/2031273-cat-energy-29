@@ -25,6 +25,12 @@
   padding: 20px 20px 24px 20px;
 }
 
+.fields__set-personal,
+.fields__set-contacts {
+  .fields__item:not(:last-child) {
+    margin-bottom: 14px;
+  }
+}
 
 .fields__list {
   list-style-type: none;
@@ -83,6 +89,12 @@
   padding: 26px 20px 10px 20px;
 }
 
+.fields__text-field--email,
+.fields__text-field--phone {
+  position: relative;
+  padding: 0 35px 0 15px;
+}
+
 .fields__set h2 {
   margin: 0;
   padding-top: 26px;
@@ -128,13 +140,6 @@
   margin: 0 15px 0 0;
   width: 30px;
   height: 30px;
-}
-
-.fields__set-personal,
-.fields__set-contacts {
-  .fields__item:not(:last-child) {
-      margin-bottom: 14px;
-  }
 }
 
 .fields__button-container {

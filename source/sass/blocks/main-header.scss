@@ -1,3 +1,17 @@
+@media (min-width: $tablet-width) {
+  .main-header {
+    padding: 25px 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-header {
+    padding: 56px 90px;
+    position: absolute;
+    width: 100%;
+  }
+}
+
 .main-header__menu {
   display: flex;
   align-items: center;
@@ -12,11 +26,23 @@
   position: relative;
 }
 
+@media (min-width: $tablet-width) {
+  .main-header__menu {
+    background-color: transparent;
+  }
+}
+
 .menu__logo-text {
   position: absolute;
   top: 50%;
   left: 160px;
   transform: translate(-50%, -50%);
+}
+
+@media (min-width: $tablet-width) {
+  .menu__logo-text{
+  left: 120px;
+  }
 }
 
 .menu__button {
@@ -28,6 +54,12 @@
   height: 30px;
   cursor: pointer;
   transition: .4s;
+}
+
+@media (min-width: $tablet-width) {
+  .menu__button {
+    display: none;
+  }
 }
 
 .menu__icon {
@@ -73,6 +105,22 @@
   background-color: $basic-white;
 }
 
+@media (min-width: $tablet-width) {
+  .menu__container {
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    overflow: visible;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .menu__container {
+    margin-left: 543px;
+  }
+}
+
 .menu__list {
   transition: .5s;
   list-style: none;
@@ -81,11 +129,32 @@
   margin: 0;
 }
 
+@media (min-width: $tablet-width) {
+  .menu__list {
+    display: flex;
+    width: 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .menu__list {
+    background-color: transparent;
+  }
+}
+
 .menu__item {
   font-size: 26px;
   width: 100%;
   padding: 22px 20px 22px 20px;
   border-top: 1px solid #e6e6e6;
+}
+
+@media (min-width: $tablet-width) {
+  .menu__item {
+    width: auto;
+    border-top: 0;
+    padding: 0;
+  }
 }
 
 .menu__link {
@@ -96,6 +165,19 @@
   font-weight: 400;
   line-height: 20px;
   width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+.menu__link  {
+  padding: 19px 17px 18px 17px;
+  font-size: 18px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .menu__link  {
+    color: $basic-white;
+  }
 }
 
 .menu__checkbox {
