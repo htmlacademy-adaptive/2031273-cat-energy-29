@@ -5,7 +5,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .main-header {
+  .main-header--additional{
     padding: 56px 90px;
     position: absolute;
     width: 100%;
@@ -116,7 +116,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .menu__container {
+  .main-header--additional .menu__container {
     margin-left: 543px;
   }
 }
@@ -175,7 +175,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .menu__link  {
+  .main-header--additional .menu__link  {
     color: $basic-white;
   }
 }

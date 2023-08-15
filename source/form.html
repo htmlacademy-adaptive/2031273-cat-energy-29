@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cat Energy</title>
   <link href="css/style.css" rel="stylesheet">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=cd0a1422-aef0-4f2e-bdc1-988cecad44ac" type="text/javascript"></script>
 </head>
 <body class="page__body">
 <header class="main-header">
@@ -39,6 +40,7 @@
       <p class="selection__description">Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
     </div>
     <form action="https://echo.htmlacademy.ru" class="selection__form fields" method="get">
+      <div class="fields__set-container">
       <fieldset class="fields__set fields__set-personal">
         <legend class="fields__legend visually-hidden"><h2>Данные животного</h2></legend>
         <ul class="fields__list">
@@ -62,6 +64,7 @@
           </li>
         </ul>
       </fieldset>
+      <div class="fields__set-program--wrapper">
       <fieldset class="fields__set fields__set-program">
         <legend class="fields__legend visually-hidden"><h2>Программа похудения</h2></legend>
         <ul class="fields__list">
@@ -85,8 +88,10 @@
           </li>
         </ul>
       </fieldset>
+      </div>
+      </div>
       <fieldset class="fields__set fields__set-contacts">
-        <legend class="fields__legend"><h2>Контактные данные <br> (владельца кота)</h2></legend>
+        <legend class="fields__legend"><h2>Контактные данные <span>(владельца кота)</span></span></h2></legend>
         <ul class="fields__list fields__list--contacts">
           <li class="fields__item fields__item--contacts">
             <label class="fields__label" for="email-user">
@@ -146,15 +151,11 @@
 </main>
 <footer class="main-footer">
   <div class="cooperation">
-    <div class="cooperation__wrapper cooperation__wrapper--secondary">
+    <div class="cooperation__wrapper cooperation__wrapper--additional">
       <h3 class="cooperation__title">Приглашаем <br> к сотрудничеству <br> дилеров!</h3>
       <address class="cooperation__address">ул. Большая <br> Конюшенная, д. 19/8 <br> Санкт-Петербург</address>
     </div>
-    <div class="cooperation__map">
-      <!--   Временная разметка карты   -->
-    <img src="img/map.png" width="320" height="362" alt="Расположение офиса Cat Energy на карте">
-      <!--   Временная разметка карты   -->
-    </div>
+    <div class="cooperation__map" id="map"></div>
   </div>
   <div class="main-footer_wrapper">
     <a class="main-footer__logo" href="#" aria-current="page">
@@ -201,5 +202,25 @@
     </a>
   </div>
 </footer>
+<script type="text/javascript">
+  ymaps.ready(init);
+  var myMap;
+
+  function init() {
+
+    myMap = new ymaps.Map("map", {
+      center: [59.938385, 30.323488], // Координаты центра карты
+      zoom: 13 // Маштаб карты
+    });
+
+    myMap.controls.add(
+      new ymaps.control.ZoomControl()  // Добавление элемента управления картой
+    );
+
+    myMap.geoObjects.add(myPlacemark); // Добавление метки
+    myPlacemark.balloon.open(); // Открытие подсказки метки
+
+  };
+</script>
 </body>
 </html>

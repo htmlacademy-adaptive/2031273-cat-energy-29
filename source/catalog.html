@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cat Energy</title>
   <link href="css/style.css" rel="stylesheet">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=cd0a1422-aef0-4f2e-bdc1-988cecad44ac" type="text/javascript"></script>
 </head>
 <body class="page__body">
 <header class="main-header">
@@ -250,15 +251,11 @@
 </main>
 <footer class="main-footer">
   <div class="cooperation">
-    <div class="cooperation__wrapper cooperation__wrapper--secondary">
+    <div class="cooperation__wrapper cooperation__wrapper--additional">
       <h3 class="cooperation__title">Приглашаем <br> к сотрудничеству <br> дилеров!</h3>
       <address class="cooperation__address">ул. Большая <br> Конюшенная, д. 19/8 <br> Санкт-Петербург</address>
     </div>
-    <div class="cooperation__map">
-      <!--   Временная разметка карты   -->
-      <img src="img/map.png" width="320" height="362" alt="Расположение офиса Cat Energy на карте">
-      <!--   Временная разметка карты   -->
-    </div>
+    <div class="cooperation__map" id="map"></div>
   </div>
   <div class="main-footer_wrapper">
     <a class="main-footer__logo" href="#" aria-current="page">
@@ -305,5 +302,25 @@
     </a>
   </div>
 </footer>
+<script type="text/javascript">
+  ymaps.ready(init);
+  var myMap;
+
+  function init() {
+
+    myMap = new ymaps.Map("map", {
+      center: [59.938385, 30.323488], // Координаты центра карты
+      zoom: 13 // Маштаб карты
+    });
+
+    myMap.controls.add(
+      new ymaps.control.ZoomControl()  // Добавление элемента управления картой
+    );
+
+    myMap.geoObjects.add(myPlacemark); // Добавление метки
+    myPlacemark.balloon.open(); // Открытие подсказки метки
+
+  };
+</script>
 </body>
 </html>
