@@ -1,8 +1,9 @@
 @media (min-width: $tablet-width) {
   .selection {
-    padding: 30px 50px 40px 50px;
+    padding: 30px 70px 40px 70px;
   }
 }
+
 .selection__wrapper {
   padding: 27px 20px 20px 20px;
   border-top: solid 1px $border-gray;
@@ -78,9 +79,9 @@
 
 @media (min-width: $desktop-width) {
   .fields__set-personal .fields__item:not(:last-child) {
-      margin-bottom: 20px;
-    }
+    margin-bottom: 20px;
   }
+}
 
 .fields__list {
   list-style-type: none;
@@ -305,7 +306,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .fields__note  {
+  .fields__note {
     font-size: 16px;
   }
 }

@@ -3,13 +3,13 @@
 }
 
 @media (min-width: $tablet-width) {
-  .programs  {
+  .programs {
     padding: 20px 30px 20px 30px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .programs  {
+  .programs {
     padding: 82px 110px 71px 110px;
   }
 }
@@ -24,9 +24,9 @@
 }
 
 @media (min-width: $desktop-width) {
-.programs-list {
-  flex-direction: row;
-  justify-content: space-between;
+  .programs-list {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -39,8 +39,8 @@
   text-align: left;
 
   &::before {
-    content: '';
-    background-color: #68B738;
+    content: "";
+    background-color: #68b738;
     border-radius: 100%;
     width: 50px;
     height: 50px;
@@ -48,7 +48,7 @@
   }
 
   &::after {
-    content: '';
+    content: "";
     background-image: url("../img/index/cat-slim.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -68,8 +68,8 @@
 }
 
 @media (min-width: $tablet-width) {
-.programs-list__item {
-  padding: 77px 63px 52px 20px;
+  .programs-list__item {
+    padding: 77px 63px 52px 20px;
 
     &::before {
       top: 50%;
@@ -94,6 +94,7 @@
   .programs-list__item {
     min-width: 570px;
     padding: 77px 60px 60px 52px;
+
     &::before {
       top: 47px;
       left: 52px;
@@ -153,13 +154,13 @@
 }
 
 @media (min-width: $tablet-width) {
-  .programs-list__item-title  {
+  .programs-list__item-title {
     margin: 5px 0 29px 0;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .programs-list__item-title  {
+  .programs-list__item-title {
     margin-left: 214px;
     margin-bottom: 73px;
   }
@@ -170,7 +171,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .programs-list__item-title  {
+  .programs-list__item-title {
     text-align: left;
     font-size: 36px;
     line-height: 36px;
@@ -206,7 +207,7 @@
 
   &::after {
     position: absolute;
-    content: '';
+    content: "";
     width: 32px;
     height: 10px;
     top: 50%;

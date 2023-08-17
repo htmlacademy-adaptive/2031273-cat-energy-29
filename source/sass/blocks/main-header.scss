@@ -1,12 +1,18 @@
 @media (min-width: $tablet-width) {
   .main-header {
-    padding: 25px 20px;
+    padding: 25px 30px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .main-header--additional{
-    padding: 56px 90px;
+  .main-header {
+    padding: 32px 110px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-header--additional {
+    padding: 32px 90px;
     position: absolute;
     width: 100%;
   }
@@ -29,6 +35,7 @@
 @media (min-width: $tablet-width) {
   .main-header__menu {
     background-color: transparent;
+    padding: 0;
   }
 }
 
@@ -40,8 +47,8 @@
 }
 
 @media (min-width: $tablet-width) {
-  .menu__logo-text{
-  left: 120px;
+  .menu__logo-text {
+    left: 100px;
   }
 }
 
@@ -53,7 +60,7 @@
   width: 24px;
   height: 30px;
   cursor: pointer;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 @media (min-width: $tablet-width) {
@@ -68,15 +75,17 @@
   background-color: $basic-black;
   width: 90%;
   height: 2px;
-  transition: .4s;
-  &::after, &::before {
+  transition: 0.4s;
+
+  &::after,
+  &::before {
     content: "";
     display: block;
     position: absolute;
     background-color: $basic-black;
     width: 100%;
     height: 2px;
-    transition: .4s;
+    transition: 0.4s;
   }
 }
 
@@ -100,7 +109,7 @@
   z-index: 4;
   height: 0;
   opacity: 1;
-  transition: .5s;
+  transition: 0.5s;
   overflow: hidden;
   background-color: $basic-white;
 }
@@ -122,7 +131,7 @@
 }
 
 .menu__list {
-  transition: .5s;
+  transition: 0.5s;
   list-style: none;
   padding-left: 0;
   width: 100%;
@@ -168,14 +177,14 @@
 }
 
 @media (min-width: $tablet-width) {
-.menu__link  {
-  padding: 19px 17px 18px 17px;
-  font-size: 18px;
+  .menu__link {
+    padding: 19px 17px 18px 17px;
+    font-size: 18px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .main-header--additional .menu__link  {
+  .main-header--additional .menu__link {
     color: $basic-white;
   }
 }
@@ -196,18 +205,17 @@
   background: transparent;
 }
 
-.menu__checkbox:checked ~ .menu__button .menu__icon::before, .menu__checkbox:checked ~ .menu__button .menu__icon::after {
+.menu__checkbox:checked ~ .menu__button .menu__icon::before,
+.menu__checkbox:checked ~ .menu__button .menu__icon::after {
   top: 0;
 }
 
 .menu__checkbox:checked ~ .menu__button .menu__icon::after {
   transform: rotate(-45deg);
   left: 5px;
-  -webkit-transform: rotate(-45deg);
 }
 
 .menu__checkbox:checked ~ .menu__button .menu__icon::before {
   transform: rotate(45deg);
   left: 5px;
-  -webkit-transform: rotate(45deg);
 }
