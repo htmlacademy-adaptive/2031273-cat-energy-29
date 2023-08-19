@@ -27,6 +27,7 @@
   .programs-list {
     flex-direction: row;
     justify-content: space-between;
+    gap: 80px;
   }
 }
 
@@ -189,8 +190,20 @@
 @media (min-width: $tablet-width) {
   .programs-list__item-subtitle {
     display: block;
-    width: 340px;
+    width: calc(95% - 270px);
     border-bottom: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .programs-list__item-subtitle {
+    width: 457px;
+  }
+}
+
+@media (min-width: 1441px) {
+  .programs-list__item-subtitle {
+    width: 100%;
   }
 }
 
