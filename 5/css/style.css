@@ -324,12 +324,12 @@ a {
     content: "";
     background-image: url("../img/index/index-background-mobile.jpg");
     background-color: #64a83b;
-    background-size: 100% 694px;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center left;
     position: absolute;
     width: 50%;
-    height: 694px;
+    height: 100%;
     top: 0;
     left: auto;
     right: 0;
@@ -435,6 +435,7 @@ a {
   .programs-list {
     flex-direction: row;
     justify-content: space-between;
+    gap: 80px;
   }
 }
 .programs-list__item {
@@ -577,8 +578,18 @@ a {
 @media (min-width: 768px) {
   .programs-list__item-subtitle {
     display: block;
-    width: 340px;
+    width: calc(95% - 270px);
     border-bottom: none;
+  }
+}
+@media (min-width: 1440px) {
+  .programs-list__item-subtitle {
+    width: 457px;
+  }
+}
+@media (min-width: 1441px) {
+  .programs-list__item-subtitle {
+    width: 100%;
   }
 }
 .programs-list__item-link {
