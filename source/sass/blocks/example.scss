@@ -82,6 +82,7 @@
 
 .result__wrapper {
   max-width: 280px;
+  margin: 0 auto 0 auto;
 }
 
 @media (min-width: $tablet-width) {
@@ -89,6 +90,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-width: none;
+    margin: 0;
   }
 }
 
