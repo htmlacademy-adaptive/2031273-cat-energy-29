@@ -5,28 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cat Energy</title>
   <link href="css/style.css" rel="stylesheet">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=cd0a1422-aef0-4f2e-bdc1-988cecad44ac" type="text/javascript"></script>
 </head>
 <body class="page__body">
 <header class="main-header">
-  <a class="main-header__logo" href="#" aria-current="page">
-    <img class="main-header__logo-img" src="img/logo-mobile-main.svg" width="33" height="38" alt="Логотип функционального питания для котов Cat Energy">
-    <img class="main-header__logo-text" src="img/logo-mobile-second.svg" width="101" height="18" alt="Логотип функционального питания для котов Cat Energy">
-  </a>
-  <nav class="main-nav">
-    <button class="main-nav__toggle" type="button">
-      <span class="visually-hidden">Открыть меню</span>
-    </button>
-    <ul class="main-nav__list site-list visually-hidden">
-      <li class="site-list__item">
-        <a href="index.html">Главная</a>
-      </li>
-      <li class="site-list__item">
-        <a href="catalog.html">Каталог продукции</a>
-      </li>
-      <li class="site-list__item site-list__item--current">
-        <a href="#" aria-current="page">Подбор программы</a>
-      </li>
-    </ul>
+  <nav class="main-header__menu">
+    <a class="menu__logo" href="index.html">
+      <img class="menu__logo-img" src="img/logo-mobile-main.svg" width="33" height="38" alt="Логотип функционального питания для котов Cat Energy">
+      <img class="menu__logo-text" tabindex="-1" src="img/logo-mobile-second.svg" width="101" height="18" alt="Логотип функционального питания для котов Cat Energy">
+    </a>
+    <input class="menu__checkbox" type="checkbox" id="checkbox">
+    <label class="menu__button" for="checkbox">
+      <span class="menu__icon"></span>
+    </label>
+    <div class="menu__container">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link" href="index.html">Главная</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="menu__item menu__item--current">
+          <a class="menu__link" href="#" aria-current="page">Подбор программы</a>
+        </li>
+      </ul>
+    </div>
   </nav>
 </header>
 <main class="main-container">
@@ -36,6 +40,7 @@
       <p class="selection__description">Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
     </div>
     <form action="https://echo.htmlacademy.ru" class="selection__form fields" method="get">
+      <div class="fields__set-container">
       <fieldset class="fields__set fields__set-personal">
         <legend class="fields__legend visually-hidden"><h2>Данные животного</h2></legend>
         <ul class="fields__list">
@@ -59,6 +64,7 @@
           </li>
         </ul>
       </fieldset>
+      <div class="fields__set-program--wrapper">
       <fieldset class="fields__set fields__set-program">
         <legend class="fields__legend visually-hidden"><h2>Программа похудения</h2></legend>
         <ul class="fields__list">
@@ -82,19 +88,21 @@
           </li>
         </ul>
       </fieldset>
+      </div>
+      </div>
       <fieldset class="fields__set fields__set-contacts">
-        <legend class="fields__legend"><h2>Контактные данные <br> (владельца кота)</h2></legend>
+        <legend class="fields__legend"><h2>Контактные данные <span>(владельца кота)</span></span></h2></legend>
         <ul class="fields__list fields__list--contacts">
           <li class="fields__item fields__item--contacts">
             <label class="fields__label" for="email-user">
               <span class="fields__title">E-mail:*</span>
-              <input class="fields__text-field" type="email" id="email-user" name="email" placeholder="kuklachev@gmail.com" required>
+              <input class="fields__text-field fields__text-field--email" type="email" id="email-user" name="email" placeholder="kuklachev@gmail.com" required>
             </label>
           </li>
-          <li class="fields__item fields__item--personal">
+          <li class="fields__item fields__item--contacts">
             <label class="fields__label" for="phone-user">
               <span class="fields__title">Телефон:*</span>
-              <input class="fields__text-field" type="tel" id="phone-user" name="phone" placeholder="8 (960) 900-60-90" required>
+              <input class="fields__text-field fields__text-field--phone" type="tel" id="phone-user" name="phone" placeholder="8 (960) 900-60-90" required>
             </label>
           </li>
         </ul>
@@ -143,15 +151,11 @@
 </main>
 <footer class="main-footer">
   <div class="cooperation">
-    <div class="cooperation__wrapper cooperation__wrapper--secondary">
-      <h3 class="cooperation__title">Приглашаем к сотрудничеству дилеров!</h3>
-      <address class="cooperation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+    <div class="cooperation__wrapper cooperation__wrapper--additional">
+      <h3 class="cooperation__title">Приглашаем <br> к сотрудничеству <br> дилеров!</h3>
+      <address class="cooperation__address">ул. Большая <br> Конюшенная, д. 19/8 <br> Санкт-Петербург</address>
     </div>
-    <div class="cooperation__map">
-      <!--   Временная разметка карты   -->
-    <img src="img/map.png" width="320" height="362" alt="Расположение офиса Cat Energy на карте">
-      <!--   Временная разметка карты   -->
-    </div>
+    <div class="cooperation__map" id="map"></div>
   </div>
   <div class="main-footer_wrapper">
     <a class="main-footer__logo" href="#" aria-current="page">
@@ -198,5 +202,25 @@
     </a>
   </div>
 </footer>
+<script type="text/javascript">
+  ymaps.ready(init);
+  var myMap;
+
+  function init() {
+
+    myMap = new ymaps.Map("map", {
+      center: [59.938385, 30.323488], // Координаты центра карты
+      zoom: 13 // Маштаб карты
+    });
+
+    myMap.controls.add(
+      new ymaps.control.ZoomControl()  // Добавление элемента управления картой
+    );
+
+    myMap.geoObjects.add(myPlacemark); // Добавление метки
+    myPlacemark.balloon.open(); // Открытие подсказки метки
+
+  };
+</script>
 </body>
 </html>

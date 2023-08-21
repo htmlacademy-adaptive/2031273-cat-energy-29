@@ -1,6 +1,64 @@
 .example {
   background-color: #eaeaea;
+}
+
+@media (min-width: $tablet-width) {
+  .example {
+    background-color: $basic-white;
+    position: relative;
+    min-height: 1081px;
+
+    &::after {
+      content: "";
+      width: 100%;
+      min-height: 462px;
+      background-color: #eaeaea;
+      position: absolute;
+      bottom: 0;
+      z-index: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example {
+    min-height: 598px;
+  }
+}
+
+.example__wrapper {
   padding: 25px 20px 40px 20px;
+  z-index: 1;
+}
+
+@media (min-width: $tablet-width) {
+  .example__wrapper {
+    padding: 25px 30px 40px 30px;
+    width: 100%;
+    position: absolute;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__wrapper {
+    padding: 25px 110px 40px 110px;
+  }
+}
+
+.example__title {
+  font-weight: 400;
+}
+
+@media (min-width: $tablet-width) {
+  .example__title {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__title {
+    margin-bottom: 146px;
+  }
 }
 
 .example__subtitle {
@@ -9,33 +67,195 @@
   margin: 0 0 20px 0;
 }
 
+
+@media (min-width: $tablet-width) {
+  .example__subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__subtitle {
+    max-width: 436px;
+  }
+}
+
+.result__wrapper {
+  max-width: 280px;
+  margin: 0 auto 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .result__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: none;
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .result__wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 366px;
+  }
+}
+
 .result-list {
   list-style-type: none;
   margin: 0 0 20px 0;
   padding: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .result-list {
+    margin-bottom: 0;
+  }
+}
+
+.result-list__item:not(:last-child) {
+  margin-right: 42px;
+}
+
+.result-list__wrapper {
+  padding: 15px 10px 17px 10px;
+  min-width: 124px;
+  border: 1px solid $border-gray;
+  border-radius: 5%;
+  margin: 0;
+  text-align: center;
+  position: relative;
+}
+
+@media (min-width: $tablet-width) {
+  .result-list__wrapper {
+    min-width: 162px;
+  }
 }
 
 .result-list__total {
   font-size: 24px;
   line-height: 24px;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
+@media (min-width: $tablet-width) {
+  .example__subtitle {
+    font-size: 16px;
+  }
+}
+
 .result-list__description {
-  margin: 8px 0 0 0;
   color: $dark-gray;
   font-family: "Lato", sans-serif;
   font-size: 12px;
   line-height: 12px;
   text-transform: lowercase;
+  z-index: 2;
+  background-color: #eaeaea;
+  min-width: 77px;
+  position: absolute;
+  left: 50%;
+  bottom: -14px;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .result-list__description {
+    font-size: 14px;
+    white-space: nowrap;
+    bottom: -5px;
+    padding: 0 5px 0 5px;
+    background-color: $basic-white;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .result-list__description {
+    background-color: #eaeaea;
+  }
+}
+
+.result-list__description span {
+  display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .result-list__description span {
+    display: inline-block;
+    margin-bottom: -100px;
+  }
 }
 
 .example__total {
   margin: 0 0 20px 0;
-  text-align: center;
   text-transform: uppercase;
   line-height: 20px;
+  text-align: center;
 }
+
+@media (min-width: $tablet-width) {
+  .example__total {
+    font-size: 20px;
+    text-align: right;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__total {
+    text-align: left;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .example__total span {
+    display: block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__total span {
+    display: block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__total span {
+    display: inline-block;
+    padding-left: 63px;
+  }
+}
+
+// Временная разметка
+.slider {
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .slider {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 110px;
+    transform: translateX(0);
+  }
+}
+// Временная разметка
