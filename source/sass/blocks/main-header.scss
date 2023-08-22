@@ -143,7 +143,7 @@
 
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     left: 17px;
     right: 17px;
     bottom: -10px;
@@ -153,11 +153,8 @@
   }
 }
 
-.menu-item--main-current {
-
-  &::before {
-    background: $basic-white;
-  }
+.menu-item--main-current::before {
+  background: $basic-white;
 }
 
 @media (min-width: $tablet-width) {

@@ -190,8 +190,8 @@
   border-radius: 100%;
 }
 
-.fields__set-program .fields__text-field[type='radio']:checked + .fields__label-mark::after {
-  content: '';
+.fields__set-program .fields__text-field[type="radio"]:checked + .fields__label-mark::after {
+  content: "";
   position: absolute;
   top: 50%;
   left: 6px;
@@ -273,7 +273,7 @@
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 20px;
     height: 20px;
@@ -287,11 +287,8 @@
   }
 }
 
-.fields__item--contacts .fields__label--phone {
-
-  &::before {
-    background-image: url("../img/form/phone.svg");
-  }
+.fields__item--contacts .fields__label--phone::before {
+  background-image: url("../img/form/phone.svg");
 }
 
 .fields__text-field--email,
@@ -323,10 +320,6 @@
     font-size: 36px;
     line-height: 36px;
   }
-}
-
-.fields__set-comments {
-  padding: 14px 0 10px 0;
 }
 
 .fields__set-comments {
@@ -367,6 +360,8 @@
 .fields__set-comments h2 {
   background-color: $basic-white;
   padding-right: 20px;
+  padding-top: 24px;
+  margin-bottom: 38px;
 }
 
 @media (min-width: $tablet-width) {
@@ -379,11 +374,6 @@
   margin: 0;
 }
 
-.fields__set-comments h2 {
-  padding-top: 24px;
-  margin-bottom: 38px;
-}
-
 .fields__text-area {
   padding: 14px;
   width: 100%;
@@ -392,10 +382,6 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-}
-
-.fields__set-additionally {
-  padding: 13px 0 17px 0;
 }
 
 .fields__set-additionally {
@@ -452,8 +438,8 @@
   border-radius: 0;
 }
 
-.fields__set-additionally .fields__text-field[type='checkbox']:checked + .fields__label-mark::after {
-  content: '';
+.fields__set-additionally .fields__text-field[type="checkbox"]:checked + .fields__label-mark::after {
+  content: "";
   position: absolute;
   top: 50%;
   left: 0;
@@ -470,6 +456,8 @@
 .fields__set-additionally h2 {
   background-color: $basic-white;
   padding-right: 20px;
+  padding-top: 23px;
+  margin-bottom: 36px;
 }
 
 @media (min-width: $tablet-width) {
@@ -490,11 +478,6 @@
   .fields__set-additionally .fields__item {
     min-width: 220px;
   }
-}
-
-.fields__set-additionally h2 {
-  padding-top: 23px;
-  margin-bottom: 36px;
 }
 
 .fields__set-additionally .fields__text-field {
