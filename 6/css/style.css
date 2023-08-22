@@ -196,20 +196,21 @@ a {
   margin: 0;
 }
 
-.menu__item--current {
-  position: relative;
+@media (min-width: 768px) {
+  .menu__item--current {
+    position: relative;
+  }
+  .menu__item--current::before {
+    position: absolute;
+    content: "";
+    left: 17px;
+    right: 17px;
+    bottom: -10px;
+    height: 2px;
+    background: #68b738;
+    z-index: 2;
+  }
 }
-.menu__item--current::before {
-  position: absolute;
-  content: "";
-  left: 17px;
-  right: 17px;
-  bottom: -10px;
-  height: 2px;
-  background: #68b738;
-  z-index: 2;
-}
-
 .menu-item--main-current::before {
   background: #ffffff;
 }
