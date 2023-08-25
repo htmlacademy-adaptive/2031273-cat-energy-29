@@ -23,6 +23,12 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .selection__inner {
+    padding: 0 110px 0 110px;
+  }
+}
+
 .selection__title {
   font-size: 36px;
   line-height: 36px;
@@ -66,6 +72,13 @@
   .form__container {
     padding-left: 70px;
     padding-right: 70px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .form__container {
+    padding-left: 110px;
+    padding-right: 110px;
   }
 }
 
