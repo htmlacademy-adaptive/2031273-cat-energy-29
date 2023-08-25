@@ -75,7 +75,7 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   .form__container {
     padding-left: 110px;
     padding-right: 110px;
@@ -114,6 +114,8 @@
 
 @media (min-width: $tablet-width) {
   .fields__set h2 {
+    padding-right: 40px;
+
     &::before {
       top: 45px;
     }
@@ -122,7 +124,7 @@
       content: "";
       position: absolute;
       top: 45px;
-      left: calc(-100vw - 20px);
+      left: calc(-100vw - 40px);
       width: 100vw;
       height: 3px;
       background-color: #68b738;
@@ -312,7 +314,6 @@
 
 .fields__set-contacts h2 {
   background-color: $basic-white;
-  padding-right: 20px;
 }
 
 @media (min-width: $tablet-width) {
@@ -379,7 +380,6 @@
 
 .fields__set-comments h2 {
   background-color: $basic-white;
-  padding-right: 20px;
   margin-bottom: 38px;
 }
 
@@ -448,7 +448,6 @@
 
 .fields__set-additionally h2 {
   background-color: $basic-white;
-  padding-right: 20px;
   margin-bottom: 36px;
 }
 
