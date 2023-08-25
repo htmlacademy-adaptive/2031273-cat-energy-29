@@ -155,8 +155,10 @@
   }
 }
 
-.menu-item--main-current::before {
-  background: $basic-white;
+@media (min-width: $desktop-width) {
+  .menu-item--main-current::before {
+    background: $basic-white;
+  }
 }
 
 @media (min-width: $tablet-width) {

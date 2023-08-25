@@ -1,3 +1,7 @@
+.main-container--form {
+  overflow: hidden;
+}
+
 .selection__wrapper {
   padding: 20px 0 20px 0;
   border-top: solid 1px $border-gray;
@@ -29,7 +33,9 @@
 @media (min-width: $tablet-width) {
   .selection__title {
     font-size: 60px;
+    line-height: 60px;
     font-weight: 400;
+    margin: 0 0 57px 0;
   }
 }
 
@@ -51,20 +57,83 @@
   }
 }
 
-.selection__form {
-  padding: 0 20px 0 20px;
+.form__container {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media (min-width: $tablet-width) {
-  .selection__form {
-    padding: 0 70px 0 70px;
+  .form__container {
+    padding-left: 70px;
+    padding-right: 70px;
   }
+}
+
+.selection__form {
+  padding: 0;
 }
 
 .fields__set {
   border: 0;
   padding: 0;
   margin: 0;
+}
+
+.fields__set h2 {
+  margin: 0;
+  padding-top: 26px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: -100vw;
+    width: 100vw;
+    height: 3px;
+    background-color: #68b738;
+    z-index: -1;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .fields__set h2 {
+    &::before {
+      top: 45px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 45px;
+      left: calc(-100vw - 20px);
+      width: 100vw;
+      height: 3px;
+      background-color: #68b738;
+      z-index: -1;
+    }
+  }
+}
+
+
+.fields__set h2 span {
+  display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .fields__set h2 span {
+    display: inline-block;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .fields__set h2 {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .fields__set-personal {
@@ -158,6 +227,10 @@
   }
 }
 
+.fields__set-program .fields__item:not(:last-child) {
+  margin-bottom: 23px;
+}
+
 @media (min-width: $tablet-width) {
   .fields__set-program--wrapper {
     border: none;
@@ -174,7 +247,7 @@
 }
 
 .fields__set-program .fields__label {
-  margin: 0 0 23px 0;
+  margin: 0;
   padding: 0 0 0 50px;
   position: relative;
   display: block;
@@ -210,33 +283,13 @@
 }
 
 .fields__set-contacts {
-  padding: 26px 20px 10px 0;
+  padding: 26px 0 10px 0;
   position: relative;
-  margin-right: -20px;
-
-  &::after {
-    content: "";
-    z-index: -1;
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    top: -35px;
-    right: 0;
-    background-color: #68b738;
-  }
 }
 
 @media (min-width: $tablet-width) {
   .fields__set-contacts {
-    padding: 26px 20px 10px 50px;
-    position: relative;
-    margin-right: -70px;
-    margin-left: -70px;
-
-    &::after {
-      top: -15px;
-      right: 0;
-    }
+    padding: 26px 0 10px 0;
   }
 }
 
@@ -251,7 +304,7 @@
 
 @media (min-width: $tablet-width) {
   .fields__set-contacts h2 {
-    padding-left: 20px;
+    margin-bottom: 38px;
   }
 }
 
@@ -297,59 +350,13 @@
   padding: 0 35px 0 15px;
 }
 
-.fields__set h2 {
-  margin: 0;
-  padding-top: 26px;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 26px;
-}
-
-.fields__set h2 span {
-  display: block;
-}
-
-@media (min-width: $tablet-width) {
-  .fields__set h2 span {
-    display: inline-block;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .fields__set h2 {
-    font-size: 36px;
-    line-height: 36px;
-  }
-}
-
 .fields__set-comments {
-  padding: 26px 20px 10px 0;
-  position: relative;
-  margin-right: -20px;
-
-  &::after {
-    content: "";
-    z-index: -1;
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    top: -47px;
-    right: 0;
-    background-color: #68b738;
-  }
+  padding: 26px 0 10px 0;
 }
 
 @media (min-width: $tablet-width) {
   .fields__set-comments {
-    padding: 26px 20px 10px 50px;
-    position: relative;
-    margin-right: -70px;
-    margin-left: -70px;
-
-    &::after {
-      top: -50px;
-      right: 0;
-    }
+    padding: 26px 0 10px 0;
   }
 }
 
@@ -360,14 +367,7 @@
 .fields__set-comments h2 {
   background-color: $basic-white;
   padding-right: 20px;
-  padding-top: 24px;
   margin-bottom: 38px;
-}
-
-@media (min-width: $tablet-width) {
-  .fields__set-comments h2 {
-    padding-left: 20px;
-  }
 }
 
 .fields__set-comments .fields__label {
@@ -382,36 +382,16 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  resize: none;
 }
 
 .fields__set-additionally {
-  padding: 26px 20px 10px 0;
-  position: relative;
-  margin-right: -20px;
-
-  &::after {
-    content: "";
-    z-index: -1;
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    top: -47px;
-    right: 0;
-    background-color: #68b738;
-  }
+  padding: 26px 0 10px 0;
 }
 
 @media (min-width: $tablet-width) {
   .fields__set-additionally {
-    padding: 26px 20px 10px 50px;
-    position: relative;
-    margin-right: -70px;
-    margin-left: -70px;
-
-    &::after {
-      top: -50px;
-      right: 0;
-    }
+    padding: 26px 0 10px 0;
   }
 }
 
@@ -456,14 +436,7 @@
 .fields__set-additionally h2 {
   background-color: $basic-white;
   padding-right: 20px;
-  padding-top: 23px;
   margin-bottom: 36px;
-}
-
-@media (min-width: $tablet-width) {
-  .fields__set-additionally h2 {
-    padding-left: 20px;
-  }
 }
 
 @media (min-width: $tablet-width) {
@@ -476,7 +449,15 @@
 
 @media (min-width: $tablet-width) {
   .fields__set-additionally .fields__item {
-    min-width: 220px;
+    width: 50%;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .fields__set-additionally .fields__item {
+    width: 25%;
+    margin-bottom: 0;
   }
 }
 
@@ -490,6 +471,13 @@
 .fields__button-container {
   padding: 17px 0 32px 0;
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .fields__button-container {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .fields__button {
@@ -511,6 +499,15 @@
   .fields__button {
     font-size: 20px;
     min-width: 282px;
+    margin-right: 50px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .fields__button {
+    min-width: 570px;
+    margin-right: 90px;
   }
 }
 
@@ -529,18 +526,4 @@
 
 .cooperation__wrapper--secondary {
   background-color: #f2f2f2;
-}
-
-@media (min-width: $tablet-width) {
-  .fields__button-container {
-    display: flex;
-    align-items: center;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .fields__button {
-    margin-right: 64px;
-    margin-bottom: 0;
-  }
 }

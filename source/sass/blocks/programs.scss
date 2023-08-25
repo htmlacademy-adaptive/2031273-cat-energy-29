@@ -37,6 +37,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   text-align: left;
 
   &::before {
@@ -70,7 +71,7 @@
 
 @media (min-width: $tablet-width) {
   .programs-list__item {
-    padding: 77px 63px 52px 20px;
+    padding: 77px 63px 52px 52px;
 
     &::before {
       top: 50%;
@@ -157,13 +158,15 @@
 @media (min-width: $tablet-width) {
   .programs-list__item-title {
     margin: 5px 0 29px 0;
+    width: calc(95% - 270px);
   }
 }
 
 @media (min-width: $desktop-width) {
   .programs-list__item-title {
-    margin-left: 214px;
+    margin-left: 162px;
     margin-bottom: 73px;
+    width: auto;
   }
 }
 
@@ -210,13 +213,15 @@
 .programs-list__item-link {
   background: transparent;
   color: $basic-black;
-  padding: 0;
+  padding: 0 50px 0 0;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   text-align: left;
   min-width: auto;
   position: relative;
+  align-self: flex-start;
+  white-space: normal;
 
   &::after {
     position: absolute;
@@ -224,7 +229,7 @@
     width: 32px;
     height: 10px;
     top: 50%;
-    left: 102px;
+    right: 0;
     transform: translateY(-50%);
     background-image: url("../img/index/icon_arrow.svg");
   }

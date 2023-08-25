@@ -8,6 +8,8 @@
 
 @media (min-width: $tablet-width) {
   .title-block {
+    font-size: 60px;
+    line-height: 60px;
     border: none;
     padding-left: 30px;
     padding-right: 30px;
@@ -77,13 +79,14 @@
   .catalog__item {
     border: none;
     min-height: 511px;
-    width: 45.75%;
+    width: calc(45.75% - 30px);
     flex-grow: 1;
     background: linear-gradient(to top, #f2f2f2 82.7%, #ffffff 30%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0;
+    padding: 11px 38px 14px 38px;
   }
 }
 
@@ -200,12 +203,12 @@
     background: $basic-white;
     border: 2px solid #f2f2f2;
     margin-top: 87px;
+    padding: 25px 40px 25px 40px;
 
     &::after {
-      top: 63px;
+      top: 50px;
       left: 0;
       right: 0;
-      margin: 0 auto;
       width: 60px;
       height: 60px;
       background: url("../img/catalog/plus-tablet.svg") no-repeat center;
@@ -213,9 +216,26 @@
   }
 }
 
+.product-card--empty span {
+  display: inline-block;
+}
+
+@media (min-width: $tablet-width) {
+  .product-card--empty span {
+    display: block;
+  }
+}
+
 .product-card--empty .product-card__title {
-  margin-top: auto;
+  margin-top: 49px;
   margin-bottom: 8px;
+}
+
+@media (min-width: $tablet-width) {
+  .product-card--empty .product-card__title {
+    margin-top: 130px;
+    margin-bottom: 23px;
+  }
 }
 
 .product-card--empty .product-card__text {
@@ -223,6 +243,12 @@
   font-family: "Lato", sans-serif;
   font-size: 12px;
   color: $dark-gray;
+}
+
+@media (min-width: $tablet-width) {
+  .product-card--empty .product-card__text {
+    margin-bottom: auto;
+  }
 }
 
 .button--secondary {
@@ -233,5 +259,6 @@
 @media (min-width: $tablet-width) {
   .button--secondary {
     margin-bottom: 15px;
+    margin-top: 10px;
   }
 }
