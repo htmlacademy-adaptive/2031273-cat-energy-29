@@ -1185,6 +1185,11 @@ a {
     padding: 0 70px 0 70px;
   }
 }
+@media (min-width: 1440px) {
+  .selection__inner {
+    padding: 0 110px 0 110px;
+  }
+}
 .selection__title {
   font-size: 36px;
   line-height: 36px;
@@ -1225,6 +1230,12 @@ a {
   .form__container {
     padding-left: 70px;
     padding-right: 70px;
+  }
+}
+@media (min-width: 768px) {
+  .form__container {
+    padding-left: 110px;
+    padding-right: 110px;
   }
 }
 .selection__form {
