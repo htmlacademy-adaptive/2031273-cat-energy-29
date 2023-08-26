@@ -139,6 +139,29 @@
 }
 
 @media (min-width: $tablet-width) {
+  .menu__item--current {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 17px;
+      right: 17px;
+      bottom: -10px;
+      height: 2px;
+      background: #68b738;
+      z-index: 2;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .menu-item--main-current::before {
+    background: $basic-white;
+  }
+}
+
+@media (min-width: $tablet-width) {
   .menu__list {
     display: flex;
     width: 100%;

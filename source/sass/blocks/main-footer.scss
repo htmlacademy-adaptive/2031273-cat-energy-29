@@ -49,17 +49,16 @@
 
 .cooperation__map {
   width: 100%;
-  height: 362px;
+  min-height: 362px;
+}
+
+.cooperation__map iframe {
+  display: block;
+  border: none;
 }
 
 @media (min-width: $tablet-width) {
-  .cooperation__map {
-    height: 400px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .cooperation__map {
+  .cooperation__map iframe {
     height: 400px;
   }
 }
@@ -79,7 +78,7 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   .main-footer_wrapper {
     padding: 55px 110px 55px 110px;
   }
