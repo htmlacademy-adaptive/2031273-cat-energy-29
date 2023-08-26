@@ -1232,7 +1232,7 @@ a {
     padding-right: 70px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
   .form__container {
     padding-left: 110px;
     padding-right: 110px;
@@ -1268,6 +1268,9 @@ a {
 }
 
 @media (min-width: 768px) {
+  .fields__set h2 {
+    padding-right: 40px;
+  }
   .fields__set h2::before {
     top: 45px;
   }
@@ -1275,7 +1278,7 @@ a {
     content: "";
     position: absolute;
     top: 45px;
-    left: calc(-100vw - 20px);
+    left: calc(-100vw - 40px);
     width: 100vw;
     height: 3px;
     background-color: #68b738;
@@ -1448,7 +1451,6 @@ a {
 
 .fields__set-contacts h2 {
   background-color: #ffffff;
-  padding-right: 20px;
 }
 
 @media (min-width: 768px) {
@@ -1510,7 +1512,6 @@ a {
 
 .fields__set-comments h2 {
   background-color: #ffffff;
-  padding-right: 20px;
   margin-bottom: 38px;
 }
 
@@ -1574,7 +1575,6 @@ a {
 
 .fields__set-additionally h2 {
   background-color: #ffffff;
-  padding-right: 20px;
   margin-bottom: 36px;
 }
 
