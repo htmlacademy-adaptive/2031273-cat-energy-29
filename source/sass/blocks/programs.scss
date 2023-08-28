@@ -39,6 +39,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   text-align: left;
+  z-index: 3;
 
   &::before {
     content: "";
@@ -222,6 +223,14 @@
   position: relative;
   align-self: flex-start;
   white-space: normal;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
 
   &::after {
     position: absolute;

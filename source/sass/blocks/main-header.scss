@@ -48,7 +48,13 @@
 
 @media (min-width: $tablet-width) {
   .menu__logo-text {
-    left: 100px;
+    left: 125px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .menu__logo-text {
+    left: 145px;
   }
 }
 
@@ -179,6 +185,18 @@
   width: 100%;
   padding: 22px 20px 22px 20px;
   border-top: 1px solid #e6e6e6;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {

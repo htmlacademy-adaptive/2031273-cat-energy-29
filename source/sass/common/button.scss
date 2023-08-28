@@ -6,4 +6,18 @@
   padding: 11px 20px;
   text-transform: uppercase;
   border: 0;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    color: #ffffff4d;
+  }
+
+  &:disabled {
+    background-color: #5eaa2f;
+    color: #ffffff4d;
+  }
 }

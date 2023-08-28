@@ -10,8 +10,12 @@
 <header class="main-header main-header--additional">
   <nav class="main-header__menu">
     <a class="menu__logo" href="#" aria-current="page">
-      <img class="menu__logo-img" src="img/logo-mobile-main.svg" width="33" height="38" alt="Логотип функционального питания для котов Cat Energy">
-      <img class="menu__logo-text" tabindex="-1" src="img/logo-mobile-second.svg" width="101" height="18" alt="Логотип функционального питания для котов Cat Energy">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/header/logo-desktop-main.svg" type="image/png" width="70" height="60">
+        <source media="(min-width: 768px)" srcset="img/header/logo-tablet-main.svg" type="image/png" width="60" height="50">
+        <img class="menu__logo-img" src="img/header/logo-mobile-main.svg" width="33" height="38" alt="Логотип функционального питания для котов Cat Energy">
+      </picture>
+      <img class="menu__logo-text" tabindex="-1" src="img/header/logo-mobile-second.svg" width="101" height="18" alt="Логотип функционального питания для котов Cat Energy">
     </a>
     <input class="menu__checkbox" type="checkbox" id="checkbox">
     <label class="menu__button" for="checkbox">
@@ -37,6 +41,11 @@
     <div class="welcome__wrapper">
       <h1 class="welcome__title">Функциональное <br> питание для котов</h1>
       <p class="welcome__subtitle">Занялся собой? Займись котом!</p>
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/index/hero/hero-img-desktop@1x.png, img/index/hero/hero-img-desktop@2x.png" type="image/png" width="552" height="499">
+        <source media="(min-width: 768px)" srcset="img/index/hero/hero-img-tablet@1x.png, img/index/hero/hero-img-tablet@2x.png" type="image/png" width="709" height="709">
+        <img class="welcome__img" src="img/index/hero/hero-img-mobile@1x.png" srcset="img/index/hero/hero-img-mobile@2x.png" width="280" height="270" alt="500 граммовая упаковка корма">
+      </picture>
       <a class="welcome__button button-link" href="form.html">Подобрать программу</a>
     </div>
   </section>
@@ -98,25 +107,24 @@
         <p class="example__total">Затраты на питание: <span>15 000 РУБ.</span></p>
       </div>
       <div class="slider">
-        <!-- Временная разметка слайдера кота -->
-        <img class="slider-img" src="img/index/cat-slider.png" width="280" height="256">
-        <!-- Временная разметка слайдера кота -->
-        <div class="slider__image-wrapper">
-          <div class="slider__image-picture slider__image-picture--before"></div>
-          <div class="slider__image-picture slider__image-picture--after"></div>
-        </div>
-        <!-- Slider__button временно скрыл -->
-        <div class="slider__button-wrapper visually-hidden">
-          <button class="slider__button slider__button--before" type="button">Было</button>
-          <div class="slider__progress-bar">
-            <input class="slider__range" type="range" min="1" max="100" value="50">
-            <div class="slider__progress-toggle"></div>
+        <div class="slider__wrapper">
+          <div class="slider__wrapper-item--before">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/slider/slider-before-desktop@1x.png, img/slider/slider-before-desktop@2x.png" type="image/png" width="560" height="512">
+              <source media="(min-width: 768px)" srcset="img/slider/slider-before-tablet@1x.png, img/slider/slider-before-tablet@2x.png" type="image/png" width="560" height="512">
+              <img src="img/slider/slider-before-mobile@1x.png" srcset="img/slider/slider-before-mobile@2x.png" width="280" height="256" alt="Толстый котик">
+            </picture>
           </div>
-          <button class="slider__button slider__button--after" type="button">Стало</button>
+          <div class="slider__wrapper-item--after">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/slider/slider-after-desktop@1x.png, img/slider/slider-after-desktop@2x.png" type="image/png" width="560" height="512">
+              <source media="(min-width: 768px)" srcset="img/slider/slider-after-tablet@1x.png, img/slider/slider-after-tablet@2x.png" type="image/png" width="560" height="512">
+              <img src="img/slider/slider-after-mobile@1x.png" srcset="img/slider/slider-after-mobile@2x.png" width="280" height="256" alt="Худой котик">
+            </picture>
+          </div>
+          <div class="slider__toggle"></div>
         </div>
-        <!-- Slider__button временно скрыл -->
       </div>
-    </div>
   </section>
 </main>
 <footer class="main-footer">
@@ -137,7 +145,7 @@
   </div>
   <div class="main-footer_wrapper">
     <a class="main-footer__logo" href="#" aria-current="page">
-      <img class="main-footer__logo-img" src="img/logo-mobile-second.svg" width="128" height="24" alt="Логотип функционального питания для котов Cat Energy">
+      <img class="main-footer__logo-img" src="img/header/logo-mobile-second.svg" width="128" height="24" alt="Логотип функционального питания для котов Cat Energy">
     </a>
     <ul class="main-footer__social social" aria-label="Социальные сети">
       <li class="social__item">
@@ -180,5 +188,6 @@
     </a>
   </div>
 </footer>
+<script src="js/slider.js"></script>
 </body>
 </html>
