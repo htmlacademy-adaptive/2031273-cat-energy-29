@@ -60,6 +60,7 @@
 @media (min-width: $desktop-width) {
   .example__title {
     margin-bottom: 146px;
+    max-width: 730px;
   }
 }
 
@@ -74,12 +75,13 @@
   .example__subtitle {
     font-size: 16px;
     margin: 0 0 55px 0;
+    max-width: 810px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .example__subtitle {
-    max-width: 436px;
+    max-width: 730px;
     margin: 0 0 69px 0;
   }
 }
@@ -281,6 +283,7 @@
 }
 
 .slider__wrapper-item--before {
+  padding-left: 15px;
   position: absolute;
   left: 0;
   top: 0;
@@ -288,6 +291,32 @@
   z-index: 2;
   width: 50%;
   height: 100%;
+  background-color: #eaeaea;
+}
+
+@media (min-width: $tablet-width) {
+  .slider__wrapper-item--before {
+    padding-left: 30px;
+    background-image: linear-gradient(to top, #eaeaea 302px, $basic-white 20%);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider__wrapper-item--before {
+    background-image: linear-gradient(to top, #eaeaea 272px, $basic-white 20%);
+  }
+}
+
+.slider__wrapper-item--after {
+  background-color: #eaeaea;
+  padding-left: 8px;
+}
+
+@media (min-width: $tablet-width) {
+  .slider__wrapper-item--after {
+    padding-left: 15px;
+    background-color: transparent;
+  }
 }
 
 .slider__toggle {
