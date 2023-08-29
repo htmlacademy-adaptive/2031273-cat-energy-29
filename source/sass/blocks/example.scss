@@ -11,7 +11,7 @@
     &::after {
       content: "";
       width: 100%;
-      min-height: 462px;
+      min-height: 463px;
       background-color: #eaeaea;
       position: absolute;
       bottom: 0;
@@ -297,13 +297,13 @@
 @media (min-width: $tablet-width) {
   .slider__wrapper-item--before {
     padding-left: 30px;
-    background-image: linear-gradient(to top, #eaeaea 302px, $basic-white 20%);
+    background-image: linear-gradient(to top, #eaeaea 304px, $basic-white 20%);
   }
 }
 
 @media (min-width: $desktop-width) {
   .slider__wrapper-item--before {
-    background-image: linear-gradient(to top, #eaeaea 272px, $basic-white 20%);
+    background-image: linear-gradient(to top, #eaeaea 273px, $basic-white 20%);
   }
 }
 
@@ -324,18 +324,13 @@
   left: 50%;
   top: 0;
   z-index: 10;
-  width: 3px;
+  width: 4px;
   height: 100%;
   background-image: url("../img/slider/curtain.svg");
   background-repeat: no-repeat;
   background-position: center;
   touch-action: pan-y;
-}
-
-@media (min-width: $tablet-width) {
-  .slider__toggle {
-    background-image: url("../img/slider/curtain-tablet.svg");
-  }
+  cursor: pointer;
 }
 
 .slider__toggle::after {
@@ -354,6 +349,6 @@
 
 @media (min-width: $tablet-width) {
   .slider__toggle::after {
-    background-image: url("../img/slider/thumb-tablet.svg");
+    //background-image: url("../img/slider/thumb-tablet.svg");
   }
 }

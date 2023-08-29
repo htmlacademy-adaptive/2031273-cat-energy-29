@@ -366,28 +366,15 @@
 
 .fields__item--contacts .fields__label {
   position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 50%;
-    right: 12px;
-    transform: translateY(-50%);
-    z-index: 1;
-    background-image: url("../img/form/email.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
 }
 
-.fields__item--contacts .fields__label--phone::before {
-  background-image: url("../img/form/phone.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.fields__text-icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  z-index: 1;
 }
-
 
 .fields__text-field--email,
 .fields__text-field--phone {
