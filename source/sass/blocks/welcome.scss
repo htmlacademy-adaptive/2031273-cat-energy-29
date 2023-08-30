@@ -20,7 +20,7 @@
   }
 }
 
-@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+@media (min-resolution: 2dppx) {
   .welcome::before {
     background-image: url("../img/index/hero/index-background-mobile@2x.jpg");
   }
@@ -55,7 +55,7 @@
   }
 }
 
-@media (min-width: $desktop-width) and (min-resolution: 144dpi), (min-width: $desktop-width) and (min-resolution: 1.5dppx) {
+@media (min-width: $desktop-width) and (min-resolution: 2dppx) {
   .welcome::before {
     background-image: url("../img/index/hero/index-background-desktop@2x.jpg");
   }

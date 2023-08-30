@@ -204,7 +204,7 @@
     margin: 0 auto;
     width: 30px;
     height: 30px;
-    background: #ffffff url("../img/catalog/plus.svg") no-repeat center;
+    background: #ffffff url("../img/sprite.svg#plus") no-repeat center;
   }
 }
 
@@ -222,6 +222,7 @@
       right: 0;
       width: 60px;
       height: 60px;
+      background: #ffffff url("../img/sprite.svg#plus-big") no-repeat center;
     }
   }
 }

@@ -84,7 +84,7 @@
     }
 
     &::after {
-      background-size: cover;
+      mask-image: url("../img/sprite.svg#cat-slim-tablet");
       top: 45%;
       right: 95px;
       left: auto;
@@ -110,6 +110,7 @@
     }
 
     &::after {
+      mask-image: url("../img/sprite.svg#cat-slim-desktop");
       top: 40px;
       left: 70px;
       right: auto;
@@ -123,6 +124,7 @@
 @media (min-width: $tablet-width) {
   .programs-list__item--pro {
     &::after {
+      mask-image: url("../img/sprite.svg#cat-pro-tablet");
       top: 50%;
       left: auto;
       right: 30px;
@@ -169,10 +171,6 @@
     margin-bottom: 73px;
     width: auto;
   }
-}
-
-.programs-list__item--pro .programs-list__img {
-  background-image: url("../img/index/cat-pro.svg");
 }
 
 @media (min-width: $tablet-width) {
@@ -240,6 +238,6 @@
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    background-image: url("../img/index/icon_arrow.svg");
+    background-image: url("../img/sprite.svg#icon_arrow");
   }
 }

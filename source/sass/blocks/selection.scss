@@ -350,6 +350,28 @@
   }
 }
 
+.fields__set-contacts .fields__label {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+    width: 21px;
+    height: 20px;
+    mask-image: url("../img/sprite.svg#input__email");
+    background-color: $basic-black;
+  }
+}
+
+.fields__set-contacts .fields__label--phone {
+  &::after {
+    mask-image: url("../img/sprite.svg#input__phone");
+  }
+}
+
 @media (min-width: $desktop-width) {
   .fields__set-contacts .fields__list {
     display: flex;
@@ -364,21 +386,8 @@
   }
 }
 
-.fields__item--contacts .fields__label {
-  position: relative;
-}
-
-.fields__text-icon {
-  position: absolute;
-  top: 50%;
-  right: 12px;
-  transform: translateY(-50%);
-  z-index: 1;
-}
-
 .fields__text-field--email,
 .fields__text-field--phone {
-  position: relative;
   padding: 0 35px 0 15px;
 }
 
@@ -465,7 +474,7 @@
   transform: translateY(-50%);
   width: 26px;
   height: 26px;
-  background-image: url("../img/index/tick.svg");
+  background-image: url("../img/sprite.svg#tick");
   background-size: contain;
   background-position: center;
 }
