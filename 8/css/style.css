@@ -538,9 +538,7 @@ a {
 .programs-list__item::after {
   content: "";
   position: absolute;
-  -webkit-mask-image: url("../img/sprite.svg#cat-slim");
-          mask-image: url("../img/sprite.svg#cat-slim");
-  background-color: #000000;
+  background-image: url("../img/sprite.svg#cat__slim");
   width: 36px;
   height: 50px;
   top: 20px;
@@ -548,8 +546,7 @@ a {
 }
 
 .programs-list__item--pro::after {
-  -webkit-mask-image: url("../img/sprite.svg#cat-pro");
-          mask-image: url("../img/sprite.svg#cat-pro");
+  background-image: url("../img/sprite.svg#cat__pro");
   width: 67px;
   top: 35px;
   left: 10px;
@@ -567,8 +564,6 @@ a {
     height: 200px;
   }
   .programs-list__item::after {
-    -webkit-mask-image: url("../img/sprite.svg#cat-slim-tablet");
-            mask-image: url("../img/sprite.svg#cat-slim-tablet");
     top: 45%;
     right: 95px;
     left: auto;
@@ -591,8 +586,6 @@ a {
     height: 100px;
   }
   .programs-list__item::after {
-    -webkit-mask-image: url("../img/sprite.svg#cat-slim-desktop");
-            mask-image: url("../img/sprite.svg#cat-slim-desktop");
     top: 40px;
     left: 70px;
     right: auto;
@@ -603,8 +596,6 @@ a {
 }
 @media (min-width: 768px) {
   .programs-list__item--pro::after {
-    -webkit-mask-image: url("../img/sprite.svg#cat-pro-tablet");
-            mask-image: url("../img/sprite.svg#cat-pro-tablet");
     top: 50%;
     left: auto;
     right: 30px;
@@ -615,8 +606,6 @@ a {
 }
 @media (min-width: 1440px) {
   .programs-list__item--pro::after {
-    -webkit-mask-image: url("../img/sprite.svg#cat-pro-desktop");
-            mask-image: url("../img/sprite.svg#cat-pro-desktop");
     top: 70px;
     left: 36px;
     right: auto;
@@ -706,7 +695,7 @@ a {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  background-image: url("../img/sprite.svg#icon_arrow");
+  background-image: url("../img/sprite.svg#icon__arrow");
 }
 
 .advantages {
@@ -766,7 +755,7 @@ a {
 .advantages__list--item::after {
   content: "";
   position: absolute;
-  background-image: url("../img/sprite.svg#icon-leaf");
+  background-image: url("../img/sprite.svg#icon__leaf");
   background-repeat: no-repeat;
   background-position: center;
   top: 15px;
@@ -812,15 +801,15 @@ a {
   }
 }
 .advantages__description--powder::after {
-  background-image: url("../img/sprite.svg#icon-powder");
+  background-image: url("../img/sprite.svg#icon__powder");
 }
 
 .advantages__description--replace::after {
-  background-image: url("../img/sprite.svg#icon-eat");
+  background-image: url("../img/sprite.svg#icon__eat");
 }
 
 .advantages__description--month::after {
-  background-image: url("../img/sprite.svg#icon-time");
+  background-image: url("../img/sprite.svg#icon__time");
 }
 
 @media (min-width: 768px) {
@@ -853,7 +842,7 @@ a {
   .advantages__decorative {
     position: absolute;
     display: block;
-    background-image: url("../img/sprite.svg#number-one");
+    background-image: url("../img/sprite.svg#number__one");
     background-repeat: no-repeat;
     background-position: center;
     width: 112px;
@@ -864,21 +853,21 @@ a {
 }
 @media (min-width: 768px) {
   .advantages__description--powder .advantages__decorative {
-    background-image: url("../img/sprite.svg#number-two");
+    background-image: url("../img/sprite.svg#number__two");
     width: 134px;
     height: 280px;
   }
 }
 @media (min-width: 768px) {
   .advantages__description--replace .advantages__decorative {
-    background-image: url("../img/sprite.svg#number-three");
+    background-image: url("../img/sprite.svg#number__three");
     width: 134px;
     height: 280px;
   }
 }
 @media (min-width: 768px) {
   .advantages__description--month .advantages__decorative {
-    background-image: url("../img/sprite.svg#number-four");
+    background-image: url("../img/sprite.svg#number__four");
     width: 136px;
     height: 280px;
   }
@@ -2180,7 +2169,6 @@ a {
     right: 0;
     width: 60px;
     height: 60px;
-    background: #ffffff url("../img/sprite.svg#plus-big") no-repeat center;
   }
 }
 .product-card--empty span {
@@ -2448,7 +2436,7 @@ a {
   margin: 0 auto;
   width: 78px;
   height: 80px;
-  background: url("../img/sprite.svg#icon-gift") no-repeat center;
+  background: url("../img/sprite.svg#icon__gift") no-repeat center;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
