@@ -39,6 +39,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   text-align: left;
+  z-index: 3;
 
   &::before {
     content: "";
@@ -51,20 +52,21 @@
 
   &::after {
     content: "";
-    background-image: url("../img/index/cat-slim.svg");
-    background-repeat: no-repeat;
-    background-position: center;
     position: absolute;
-    top: 20px;
-    width: 50px;
+    mask-image: url("../img/sprite.svg#cat-slim");
+    background-color: $basic-black;
+    width: 36px;
     height: 50px;
+    top: 20px;
+    left: 28px;
   }
 }
 
 .programs-list__item--pro {
   &::after {
-    background-image: url("../img/index/cat-pro.svg");
+    mask-image: url("../img/sprite.svg#cat-pro");
     width: 67px;
+    top: 35px;
     left: 10px;
   }
 }
@@ -82,12 +84,13 @@
     }
 
     &::after {
+      mask-image: url("../img/sprite.svg#cat-slim-tablet");
       top: 45%;
       right: 95px;
+      left: auto;
       transform: translate(0, -50%);
-      width: 141px;
+      width: 140px;
       height: 194px;
-      background-image: url("../img/index/cat-slim-tablet.svg");
     }
   }
 }
@@ -107,13 +110,13 @@
     }
 
     &::after {
+      mask-image: url("../img/sprite.svg#cat-slim-desktop");
       top: 40px;
       left: 70px;
       right: auto;
       transform: translate(0, 0);
       width: 70px;
       height: 97px;
-      background-image: url("../img/index/cat-slim-desktop.svg");
     }
   }
 }
@@ -121,13 +124,13 @@
 @media (min-width: $tablet-width) {
   .programs-list__item--pro {
     &::after {
+      mask-image: url("../img/sprite.svg#cat-pro-tablet");
       top: 50%;
       left: auto;
       right: 30px;
       transform: translate(0, -50%);
-      width: 269px;
+      width: 268px;
       height: 112px;
-      background-image: url("../img/index/cat-pro-tablet.svg");
     }
   }
 }
@@ -135,13 +138,13 @@
 @media (min-width: $desktop-width) {
   .programs-list__item--pro {
     &::after {
+      mask-image: url("../img/sprite.svg#cat-pro-desktop");
       top: 70px;
       left: 36px;
       right: auto;
       width: 134px;
       height: 56px;
       transform: translate(0, 0);
-      background-image: url("../img/index/cat-pro-desktop.svg");
     }
   }
 }
@@ -168,10 +171,6 @@
     margin-bottom: 73px;
     width: auto;
   }
-}
-
-.programs-list__item--pro .programs-list__img {
-  background-image: url("../img/index/cat-pro.svg");
 }
 
 @media (min-width: $tablet-width) {
@@ -223,6 +222,14 @@
   align-self: flex-start;
   white-space: normal;
 
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -231,6 +238,6 @@
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    background-image: url("../img/index/icon_arrow.svg");
+    background-image: url("../img/sprite.svg#icon_arrow");
   }
 }

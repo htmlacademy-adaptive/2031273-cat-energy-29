@@ -11,7 +11,7 @@
     &::after {
       content: "";
       width: 100%;
-      min-height: 462px;
+      min-height: 463px;
       background-color: #eaeaea;
       position: absolute;
       bottom: 0;
@@ -60,6 +60,7 @@
 @media (min-width: $desktop-width) {
   .example__title {
     margin-bottom: 146px;
+    max-width: 730px;
   }
 }
 
@@ -74,12 +75,13 @@
   .example__subtitle {
     font-size: 16px;
     margin: 0 0 55px 0;
+    max-width: 810px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .example__subtitle {
-    max-width: 436px;
+    max-width: 730px;
     margin: 0 0 69px 0;
   }
 }
@@ -241,17 +243,18 @@
   }
 }
 
-// Временная разметка
 .slider {
   text-align: center;
+  max-width: 280px;
+  margin: 0 auto;
 }
 
 @media (min-width: $tablet-width) {
   .slider {
+    min-width: 560px;
     position: absolute;
-    top: 100%;
     left: 50%;
-    transform: translate(-50%, 100%);
+    transform: translate(-50%, 50%);
   }
 }
 
@@ -264,4 +267,88 @@
     transform: translateX(0);
   }
 }
-// Временная разметка
+
+.slider__wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider__wrapper img {
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slider__wrapper-item--before {
+  padding-left: 15px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  z-index: 2;
+  width: 50%;
+  height: 100%;
+  background-color: #eaeaea;
+}
+
+@media (min-width: $tablet-width) {
+  .slider__wrapper-item--before {
+    padding-left: 30px;
+    background-image: linear-gradient(to top, #eaeaea 304px, $basic-white 20%);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider__wrapper-item--before {
+    background-image: linear-gradient(to top, #eaeaea 273px, $basic-white 20%);
+  }
+}
+
+.slider__wrapper-item--after {
+  background-color: #eaeaea;
+  padding-left: 8px;
+}
+
+@media (min-width: $tablet-width) {
+  .slider__wrapper-item--after {
+    padding-left: 15px;
+    background-color: transparent;
+  }
+}
+
+.slider__toggle {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: 10;
+  width: 4px;
+  height: 100%;
+  background-image: url("../img/slider/curtain.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  touch-action: pan-y;
+  cursor: pointer;
+}
+
+@media (min-width: $tablet-width) {
+  .slider__toggle {
+    background-image: url("../img/slider/curtain-tablet.svg");
+  }
+}
+
+.slider__toggle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  background-image: url("../img/slider/thumb.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(-50%, -50%);
+}
