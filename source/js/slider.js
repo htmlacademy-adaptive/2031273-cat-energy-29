@@ -6,7 +6,7 @@ const body = document.body;
 
 let isActive = false;
 
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('resize', () => {
   let width = slider.offsetWidth;
   beforeImage.style.width = `${width}px`;
 });
