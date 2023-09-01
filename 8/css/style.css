@@ -1536,6 +1536,17 @@ a {
     line-height: 36px;
   }
 }
+/* stylelint-disable */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* stylelint-enable */
 .fields__set-personal {
   padding: 20px 0 24px 0;
 }
