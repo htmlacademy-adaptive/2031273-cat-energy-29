@@ -113,13 +113,23 @@
             <li class="fields__item fields__item--contacts">
               <label class="fields__label fields__label--email" for="email-user">
                 <span class="fields__title">E-mail:*</span>
-                <input class="fields__text-field fields__text-field--email" type="email" id="email-user" name="email" placeholder="kuklachev@gmail.com" required>
+                <span class="fields__wrapper">
+                  <input class="fields__text-field fields__text-field--email" type="email" id="email-user" name="email" placeholder="kuklachev@gmail.com" required>
+                  <svg width="21" height="20">
+                    <use xlink:href="/img/sprite.svg#input__email"></use>
+                  </svg>
+                </span>
               </label>
             </li>
             <li class="fields__item fields__item--contacts">
               <label class="fields__label fields__label--phone" for="phone-user">
                 <span class="fields__title">Телефон:*</span>
-                <input class="fields__text-field fields__text-field--phone" type="tel" id="phone-user" name="phone" placeholder="8 (960) 900-60-90" required>
+                <span class="fields__wrapper">
+                  <input class="fields__text-field fields__text-field--phone" type="tel" id="phone-user" name="phone" placeholder="8 (960) 900-60-90" required>
+                  <svg width="21" height="20">
+                    <use xlink:href="/img/sprite.svg#input__phone"></use>
+                  </svg>
+                </span>
               </label>
             </li>
           </ul>
