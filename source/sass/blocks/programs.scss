@@ -4,7 +4,7 @@
 
 @media (min-width: $tablet-width) {
   .programs {
-    padding: 20px 30px 20px 30px;
+    padding: 62px 30px 20px 30px;
   }
 }
 
@@ -23,6 +23,12 @@
   gap: 20px;
 }
 
+@media (min-width: $tablet-width) {
+  .programs-list {
+    gap: 30px;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .programs-list {
     flex-direction: row;
@@ -33,7 +39,7 @@
 
 .programs-list__item {
   background-color: #f2f2f2;
-  padding: 24px 33px 18px 20px;
+  padding: 24px 33px 21px 20px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -72,10 +78,11 @@
 
 @media (min-width: $tablet-width) {
   .programs-list__item {
-    padding: 77px 63px 52px 52px;
+    padding: 77px 63px 57px 52px;
+    min-height: 372px;
 
     &::before {
-      top: 50%;
+      top: 51%;
       right: 63px;
       transform: translate(0, -50%);
       width: 200px;
@@ -83,7 +90,7 @@
     }
 
     &::after {
-      top: 45%;
+      top: 48%;
       right: 95px;
       left: auto;
       transform: translate(0, -50%);
@@ -96,7 +103,7 @@
 @media (min-width: $desktop-width) {
   .programs-list__item {
     min-width: 570px;
-    padding: 77px 60px 60px 52px;
+    padding: 77px 60px 43px 52px;
 
     &::before {
       top: 47px;
@@ -155,7 +162,7 @@
 
 @media (min-width: $tablet-width) {
   .programs-list__item-title {
-    margin: 5px 0 29px 0;
+    margin: 0 0 26px 0;
     width: calc(95% - 270px);
   }
 }
@@ -187,14 +194,16 @@
 @media (min-width: $tablet-width) {
   .programs-list__item-subtitle {
     display: block;
-    width: calc(95% - 270px);
+    width: calc(95% - 220px);
     border-bottom: none;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .programs-list__item-subtitle {
-    width: 457px;
+    width: 465px;
   }
 }
 
@@ -207,6 +216,7 @@
 .programs-list__item-link {
   background: transparent;
   color: $basic-black;
+  margin-top: 5px;
   padding: 0 50px 0 0;
   font-size: 16px;
   line-height: 16px;
@@ -231,8 +241,25 @@
     width: 32px;
     height: 10px;
     top: 50%;
-    right: 0;
-    transform: translateY(-50%);
+    right: 2px;
+    transform: translateY(calc(-50% - 2px));
     background-image: url("../img/sprite.svg#icon__arrow");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .programs-list__item-link {
+    margin-top: 18px;
+    font-size: 20px;
+
+    &::after {
+      right: -7px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programs-list__item-link {
+    margin-top: -2px;
   }
 }

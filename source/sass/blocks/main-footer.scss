@@ -26,7 +26,7 @@
 }
 
 
-@media (max-width: $desktop-width) {
+@media (min-width: $desktop-width) {
   .cooperation__wrapper--additional {
     background-color: #f2f2f2;
   }
@@ -40,11 +40,62 @@
   margin: 0;
 }
 
+@media (min-width: $tablet-width) {
+  .cooperation__title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .cooperation__title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
 .cooperation__address {
   color: $dark-gray;
   font-family: "Lato", sans-serif;
   font-style: normal;
   line-height: 20px;
+  margin-right: 7px;
+  text-align: left;
+}
+
+@media (min-width: $tablet-width) {
+  .cooperation__address {
+    font-size: 16px;
+    color: $dark-gray;
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    line-height: 20px;
+    margin-top: -1px;
+    text-align: right;
+    margin-right: -3px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .cooperation__address {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .cooperation__address span {
+    display: block;
+    margin-top: 21px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .cooperation__address span {
+    display: block;
+    margin-top: 21px;
+  }
 }
 
 .cooperation__map {
@@ -80,7 +131,7 @@
 
 @media (min-width: $desktop-width) {
   .main-footer_wrapper {
-    padding: 55px 110px 55px 110px;
+    padding: 67px 110px 55px 110px;
   }
 }
 
@@ -100,8 +151,8 @@
 
 .main-footer__social {
   list-style-type: none;
-  padding: 20px 0 20px 0;
-  margin: 20px 0 20px 0;
+  padding: 30px 0 31px 0;
+  margin: 16px 0 20px 0;
   display: flex;
   justify-content: center;
   border-top: solid 1px $border-gray;
@@ -148,15 +199,34 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .social__link {
+    left: -24px;
+  }
+}
+
 .social__link--youtube {
   mask-image: url("../img/sprite.svg#social__link-youtube");
   left: -15px;
+}
+
+@media (min-width: $tablet-width) {
+  .social__link--youtube {
+    left: 4px;
+  }
 }
 
 .social__link--telegram {
   mask-image: url("../img/sprite.svg#social__link-telegram");
   left: 17px;
 }
+
+@media (min-width: $tablet-width) {
+  .social__link--telegram {
+    left: 32px;
+  }
+}
+
 
 .main-footer__copyright {
   display: flex;
