@@ -1760,6 +1760,10 @@ input[type=number] {
   fill: #64a83b;
 }
 
+.fields__set-contacts .fields__text-field:focus:invalid + svg {
+  fill: #ff8282;
+}
+
 .fields__set-comments {
   padding: 26px 0 10px 0;
 }
