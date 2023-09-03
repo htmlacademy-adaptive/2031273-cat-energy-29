@@ -177,7 +177,7 @@
 
 .social__link {
   position: absolute;
-  mask-image: url("../img/sprite.svg#social__link-vk");
+  mask-image: url("../img/sprite.svg#icon-vk");
   background-color: #666666;
   width: 30px;
   height: 30px;
@@ -206,7 +206,7 @@
 }
 
 .social__link--youtube {
-  mask-image: url("../img/sprite.svg#social__link-youtube");
+  mask-image: url("../img/sprite.svg#icon-youtube");
   left: -15px;
 }
 
@@ -217,7 +217,7 @@
 }
 
 .social__link--telegram {
-  mask-image: url("../img/sprite.svg#social__link-telegram");
+  mask-image: url("../img/sprite.svg#icon-telegram");
   left: 17px;
 }
 
@@ -269,7 +269,7 @@
 }
 
 .copyright__icon {
-  mask-image: url("../img/sprite.svg#copyright_icon");
+  mask-image: url("../img/sprite.svg#copyright-icon");
   background-color: #666666;
   width: 27px;
   height: 34px;
