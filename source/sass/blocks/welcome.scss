@@ -6,7 +6,7 @@
 
   &::before {
     content: "";
-    background-image: url("../img/index/hero/index-background-mobile@1x.jpg");
+    background-image: url("../img/index/hero/index-background-mobile@1x.webp");
     background-color: #64a83b;
     background-size: 270px 310px;
     background-repeat: no-repeat;
@@ -22,7 +22,7 @@
 
 @media (min-resolution: 2dppx) {
   .welcome::before {
-    background-image: url("../img/index/hero/index-background-mobile@2x.jpg");
+    background-image: url("../img/index/hero/index-background-mobile@2x.webp");
   }
 }
 
@@ -39,7 +39,7 @@
   .welcome {
     &::before {
       content: "";
-      background-image: url("../img/index/hero/index-background-desktop@1x.jpg");
+      background-image: url("../img/index/hero/index-background-desktop@1x.webp");
       background-color: #64a83b;
       background-size: cover;
       background-repeat: no-repeat;
@@ -57,7 +57,7 @@
 
 @media (min-width: $desktop-width) and (min-resolution: 2dppx) {
   .welcome::before {
-    background-image: url("../img/index/hero/index-background-desktop@2x.jpg");
+    background-image: url("../img/index/hero/index-background-desktop@2x.webp");
   }
 }
 
