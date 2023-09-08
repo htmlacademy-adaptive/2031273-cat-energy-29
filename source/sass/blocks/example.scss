@@ -310,7 +310,6 @@
 }
 
 .slider__wrapper-item--before {
-  padding-left: 15px;
   position: absolute;
   left: 0;
   top: 0;
@@ -323,7 +322,6 @@
 
 @media (min-width: $tablet-width) {
   .slider__wrapper-item--before {
-    padding-left: 30px;
     background-image: linear-gradient(to top, #eaeaea 361px, $basic-white 20%);
   }
 }
@@ -331,6 +329,17 @@
 @media (min-width: $desktop-width) {
   .slider__wrapper-item--before {
     background-image: linear-gradient(to top, #eaeaea 365px, $basic-white 20%);
+  }
+}
+
+.slider__wrapper-item--before img {
+  object-position: left;
+  margin-left: -10px;
+}
+
+@media (min-width: $tablet-width) {
+  .slider__wrapper-item--before img {
+    margin-left: -25px;
   }
 }
 
