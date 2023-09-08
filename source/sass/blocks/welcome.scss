@@ -6,13 +6,13 @@
 
   &::before {
     content: "";
-    background-image: url("../img/index/hero/index-background-mobile@1x.jpg");
+    background-image: url("../img/index/hero/index-background-mobile@1x.webp");
     background-color: #64a83b;
     background-size: 270px 310px;
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    height: 310px;
+    height: 312px;
     top: -10px;
     left: 0;
     right: 0;
@@ -22,7 +22,7 @@
 
 @media (min-resolution: 2dppx) {
   .welcome::before {
-    background-image: url("../img/index/hero/index-background-mobile@2x.jpg");
+    background-image: url("../img/index/hero/index-background-mobile@2x.webp");
   }
 }
 
@@ -39,7 +39,7 @@
   .welcome {
     &::before {
       content: "";
-      background-image: url("../img/index/hero/index-background-desktop@1x.jpg");
+      background-image: url("../img/index/hero/index-background-desktop@1x.webp");
       background-color: #64a83b;
       background-size: cover;
       background-repeat: no-repeat;
@@ -57,7 +57,7 @@
 
 @media (min-width: $desktop-width) and (min-resolution: 2dppx) {
   .welcome::before {
-    background-image: url("../img/index/hero/index-background-desktop@2x.jpg");
+    background-image: url("../img/index/hero/index-background-desktop@2x.webp");
   }
 }
 
@@ -76,6 +76,7 @@
   .welcome__wrapper {
     text-align: left;
     margin-left: 90px;
+    padding: 37px 20px 0 29px;
   }
 }
 
@@ -83,7 +84,7 @@
   .welcome__wrapper {
     margin-left: 160px;
     margin-top: 225px;
-    min-height: 694px;
+    min-height: 469px;
   }
 }
 
@@ -101,6 +102,13 @@
     color: $basic-black;
     font-size: 60px;
     line-height: 60px;
+    margin-bottom: 41px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .welcome__title {
+    margin-top: -38px;
   }
 }
 
@@ -123,15 +131,15 @@
 @media (min-width: $tablet-width) {
   .welcome__img {
     display: block;
-    margin-left: -60px;
+    margin-left: -41px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .welcome__img {
     position: absolute;
-    top: 0;
-    left: 50%;
+    top: -81px;
+    left: calc(50% + 75px);
     transform: translateX(-50%);
   }
 }
@@ -171,7 +179,13 @@
     padding: 18px 10px;
     min-width: 244px;
     position: absolute;
-    top: 235px;
-    left: 20px;
+    top: 268px;
+    left: 29px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .welcome__button {
+    top: 230px;
   }
 }

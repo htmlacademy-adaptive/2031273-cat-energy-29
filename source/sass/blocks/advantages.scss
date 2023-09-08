@@ -1,5 +1,5 @@
 .advantages {
-  padding: 0 20px 49px 20px;
+  padding: 0 20px 33px 20px;
   text-align: left;
 }
 
@@ -44,6 +44,12 @@
   }
 }
 
+@media (min-width: 1441px) {
+  .advantages__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 .advantages__list--item {
   position: relative;
   min-height: 60px;
@@ -61,7 +67,7 @@
   &::after {
     content: "";
     position: absolute;
-    background-image: url("../img/sprite.svg#icon__leaf");
+    background-image: url("../img/sprite.svg#icon-leaf");
     background-repeat: no-repeat;
     background-position: center;
     top: 15px;
@@ -103,7 +109,7 @@
 }
 
 .advantages__list--item:not(:last-child) {
-  margin-bottom: 26px;
+  margin-bottom: 21px;
 }
 
 @media (min-width: $tablet-width) {
@@ -114,19 +120,19 @@
 
 .advantages__description--powder {
   &::after {
-    background-image: url("../img/sprite.svg#icon__powder");
+    background-image: url("../img/sprite.svg#icon-powder");
   }
 }
 
 .advantages__description--replace {
   &::after {
-    background-image: url("../img/sprite.svg#icon__eat");
+    background-image: url("../img/sprite.svg#icon-eat");
   }
 }
 
 .advantages__description--month {
   &::after {
-    background-image: url("../img/sprite.svg#icon__time");
+    background-image: url("../img/sprite.svg#icon-time");
   }
 }
 
@@ -135,6 +141,13 @@
     font-size: 60px;
     font-weight: 400;
     line-height: 60px;
+    margin-top: 27px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages__title {
+    margin-top: 4px;
   }
 }
 
@@ -151,6 +164,8 @@
     font-size: 16px;
     z-index: 2;
     width: 255px;
+    margin-top: -9px;
+    line-height: 24px;
   }
 }
 
@@ -162,7 +177,7 @@
   .advantages__decorative {
     position: absolute;
     display: block;
-    background-image: url("../img/sprite.svg#number__one");
+    background-image: url("../img/sprite.svg#number-one");
     background-repeat: no-repeat;
     background-position: center;
     width: 112px;
@@ -174,7 +189,7 @@
 
 @media (min-width: $tablet-width) {
   .advantages__description--powder .advantages__decorative {
-    background-image: url("../img/sprite.svg#number__two");
+    background-image: url("../img/sprite.svg#number-two");
     width: 134px;
     height: 280px;
   }
@@ -182,7 +197,7 @@
 
 @media (min-width: $tablet-width) {
   .advantages__description--replace .advantages__decorative {
-    background-image: url("../img/sprite.svg#number__three");
+    background-image: url("../img/sprite.svg#number-three");
     width: 134px;
     height: 280px;
   }
@@ -190,8 +205,14 @@
 
 @media (min-width: $tablet-width) {
   .advantages__description--month .advantages__decorative {
-    background-image: url("../img/sprite.svg#number__four");
+    background-image: url("../img/sprite.svg#number-four");
     width: 136px;
     height: 280px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .advantages__description--month span {
+    display: block;
   }
 }

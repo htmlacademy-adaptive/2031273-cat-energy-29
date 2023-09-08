@@ -1,18 +1,18 @@
 @media (min-width: $tablet-width) {
   .main-header {
-    padding: 25px 30px;
+    padding: 18px 13px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-header {
-    padding: 32px 110px;
+    padding: 52px 94px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-header--additional {
-    padding: 32px 110px;
+    padding: 52px 91px;
     position: absolute;
     width: 100%;
   }
@@ -53,6 +53,24 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .menu__logo {
+    padding-left: 17px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .menu__logo {
+    padding-left: 16px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-header--additional .menu__logo {
+    padding-left: -5px;
+  }
+}
+
 .menu__logo-text {
   position: absolute;
   top: 50%;
@@ -62,15 +80,24 @@
 
 @media (min-width: $tablet-width) {
   .menu__logo-text {
-    left: 125px;
+    left: 139px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .menu__logo-text {
-    left: 145px;
+    left: 158px;
+    width: 118px;
+    height: 21px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .main-header--additional .menu__logo-text {
+    left: 156px;
+  }
+}
+
 
 .menu__button {
   position: relative;
@@ -167,10 +194,18 @@
       content: "";
       left: 17px;
       right: 17px;
-      bottom: -10px;
+      bottom: -9px;
       height: 2px;
       background: #68b738;
       z-index: 2;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .menu__item--current {
+    &::before {
+      bottom: -13px;
     }
   }
 }
@@ -235,6 +270,12 @@
   .menu__link {
     padding: 19px 17px 18px 17px;
     font-size: 18px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .menu__link {
+    font-size: 20px;
   }
 }
 

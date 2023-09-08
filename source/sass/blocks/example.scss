@@ -6,12 +6,12 @@
   .example {
     background-color: $basic-white;
     position: relative;
-    min-height: 1081px;
+    min-height: 1069px;
 
     &::after {
       content: "";
       width: 100%;
-      min-height: 463px;
+      min-height: 462px;
       background-color: #eaeaea;
       position: absolute;
       bottom: 0;
@@ -22,7 +22,7 @@
 
 @media (min-width: $desktop-width) {
   .example {
-    min-height: 598px;
+    min-height: 608px;
   }
 }
 
@@ -47,6 +47,7 @@
 
 .example__title {
   font-weight: 400;
+  margin-top: 12px;
 }
 
 @media (min-width: $tablet-width) {
@@ -54,11 +55,13 @@
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 60px;
+    margin-top: 8px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .example__title {
+    margin-top: -14px;
     margin-bottom: 146px;
     max-width: 730px;
   }
@@ -74,14 +77,22 @@
 @media (min-width: $tablet-width) {
   .example__subtitle {
     font-size: 16px;
-    margin: 0 0 55px 0;
+    margin: 0 0 59px 0;
     max-width: 810px;
+    line-height: 24px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .example__subtitle {
-    max-width: 730px;
+    max-width: 436px;
+    margin: 0 0 69px 0;
+  }
+}
+
+@media (min-width: 1500px) {
+  .example__subtitle {
+    max-width: 700px;
     margin: 0 0 69px 0;
   }
 }
@@ -125,12 +136,12 @@
 
 @media (min-width: $desktop-width) {
   .result-list {
-    margin-bottom: 30px;
+    margin-bottom: 21px;
   }
 }
 
 .result-list__item:not(:last-child) {
-  margin-right: 42px;
+  margin-right: 31px;
 }
 
 .result-list__wrapper {
@@ -154,6 +165,13 @@
   line-height: 24px;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .result-list__total {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -202,7 +220,7 @@
 }
 
 .example__total {
-  margin: 40px 0 20px 0;
+  margin: 37px 0 20px 0;
   text-transform: uppercase;
   line-height: 20px;
   text-align: center;
@@ -227,6 +245,7 @@
 @media (min-width: $tablet-width) {
   .example__total span {
     display: block;
+    margin-top: 13px;
   }
 }
 
@@ -247,6 +266,7 @@
   text-align: center;
   max-width: 280px;
   margin: 0 auto;
+  min-height: 256px;
 }
 
 @media (min-width: $tablet-width) {
@@ -255,6 +275,7 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%, 50%);
+    top: 200px;
   }
 }
 
@@ -272,13 +293,20 @@
   position: relative;
   overflow: hidden;
   width: 100%;
+  min-height: 256px;
 }
 
 .slider__wrapper img {
   max-width: none;
-  height: 100%;
+  min-height: 256px;
   object-fit: cover;
   display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .slider__wrapper img {
+    min-height: 512px;
+  }
 }
 
 .slider__wrapper-item--before {
@@ -296,13 +324,13 @@
 @media (min-width: $tablet-width) {
   .slider__wrapper-item--before {
     padding-left: 30px;
-    background-image: linear-gradient(to top, #eaeaea 322px, $basic-white 20%);
+    background-image: linear-gradient(to top, #eaeaea 361px, $basic-white 20%);
   }
 }
 
 @media (min-width: $desktop-width) {
   .slider__wrapper-item--before {
-    background-image: linear-gradient(to top, #eaeaea 285px, $basic-white 20%);
+    background-image: linear-gradient(to top, #eaeaea 365px, $basic-white 20%);
   }
 }
 
@@ -346,7 +374,7 @@
   border-radius: 100%;
   width: 40px;
   height: 40px;
-  background-image: url("../img/sprite.svg#thumb__icon");
+  background-image: url("../img/sprite.svg#thumb-icon");
   background-repeat: no-repeat;
   background-position: center;
   transform: translate(-50%, -50%);
