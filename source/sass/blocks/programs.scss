@@ -103,6 +103,7 @@
 @media (min-width: $desktop-width) {
   .programs-list__item {
     min-width: 570px;
+    width: 50%;
     padding: 77px 60px 43px 52px;
 
     &::before {
@@ -124,6 +125,12 @@
     }
   }
 }
+
+//@media (min-width: 1441px) {
+//  .programs-list__item {
+//    min-width: 50%;
+//  }
+//}
 
 @media (min-width: $tablet-width) {
   .programs-list__item--pro {

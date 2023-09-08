@@ -466,8 +466,15 @@ input[type=number] {
 @media (min-width: $desktop-width) {
   .fields__set-contacts .fields__list {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    gap: 80px;
     justify-content: space-between;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .fields__set-contacts .fields__item {
+    width: 50%;
   }
 }
 

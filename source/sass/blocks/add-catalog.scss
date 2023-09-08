@@ -96,6 +96,7 @@
   .add-catalog__container {
     display: flex;
     padding: 40px 0 90px 0;
+    justify-content: space-between;
   }
 }
 
@@ -128,6 +129,7 @@
 @media (min-width: $desktop-width) {
   .add-catalog__list {
     margin-right: 79px;
+    width: 100%;
   }
 }
 
