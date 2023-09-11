@@ -129,6 +129,19 @@
   }
 }
 
+.cooperation__map-img {
+  width: 100%;
+  display: block;
+  max-height: 362px;
+  object-fit: fill;
+}
+
+@media (min-width: $tablet-width) {
+  .cooperation__map-img {
+    height: 400px;
+  }
+}
+
 .main-footer_wrapper {
   background-color: #f2f2f2;
   padding: 40px 20px 40px 20px;
