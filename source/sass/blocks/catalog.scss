@@ -280,10 +280,8 @@
 }
 
 @media (min-width: $desktop-width) {
-  .product-card--empty {
-    &::after {
-      top: 56px
-    }
+  .product-card--empty::after {
+    top: 56px;
   }
 }
 
@@ -296,7 +294,7 @@
   .product-card--empty .product-card__title {
     margin-top: 135px;
     margin-bottom: 23px;
-     max-width: 135px;
+    max-width: 135px;
   }
 }
 
