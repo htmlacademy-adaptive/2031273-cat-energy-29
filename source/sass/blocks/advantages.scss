@@ -1,5 +1,5 @@
 .advantages {
-  padding: 0 20px 33px 20px;
+  padding: 0 20px 40px 20px;
   text-align: left;
 }
 
@@ -153,7 +153,7 @@
 
 .advantages__description {
   color: $dark-gray;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   padding-left: 80px;
   margin: 0;
 }
@@ -177,19 +177,21 @@
   .advantages__decorative {
     position: absolute;
     display: block;
-    background-image: url("../img/sprite.svg#number-one");
-    background-repeat: no-repeat;
-    background-position: center;
     width: 112px;
     height: 280px;
-    top: 0;
-    left: 98px;
+    top: -12px;
+    left: 116px;
+    color: var(--basic_grey, #f2f2f2);
+    text-align: center;
+    font-size: 280px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 280px;
   }
 }
 
 @media (min-width: $tablet-width) {
   .advantages__description--powder .advantages__decorative {
-    background-image: url("../img/sprite.svg#number-two");
     width: 134px;
     height: 280px;
   }
@@ -197,7 +199,6 @@
 
 @media (min-width: $tablet-width) {
   .advantages__description--replace .advantages__decorative {
-    background-image: url("../img/sprite.svg#number-three");
     width: 134px;
     height: 280px;
   }
@@ -205,7 +206,6 @@
 
 @media (min-width: $tablet-width) {
   .advantages__description--month .advantages__decorative {
-    background-image: url("../img/sprite.svg#number-four");
     width: 136px;
     height: 280px;
   }

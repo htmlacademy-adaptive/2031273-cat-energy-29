@@ -18,6 +18,12 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .main-header--additional {
+    padding-bottom: 0;
+  }
+}
+
 .main-header__menu {
   display: flex;
   align-items: center;

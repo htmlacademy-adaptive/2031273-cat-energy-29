@@ -4,6 +4,7 @@
   align-items: center;
   text-align: left;
   padding: 26px 20px 26px 20px;
+  background-color: #f2f2f2;
 }
 
 @media (min-width: $tablet-width) {
@@ -16,20 +17,21 @@
   .cooperation__wrapper {
     padding: 60px 80px;
     min-width: 565px;
+    max-width: 60%;
     min-height: 199px;
+    max-height: 270px;
     position: absolute;
     z-index: 1;
     margin-top: 95px;
     margin-left: 110px;
     background-color: $basic-white;
+    flex-wrap: wrap;
+    overflow-y: scroll;
   }
 }
 
-
-@media (min-width: $desktop-width) {
-  .cooperation__wrapper--additional {
-    background-color: #f2f2f2;
-  }
+.cooperation__wrapper--additional {
+  background-color: $basic-white;
 }
 
 .cooperation__title {
@@ -56,7 +58,7 @@
 
 .cooperation__address {
   color: $dark-gray;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-style: normal;
   line-height: 20px;
   margin-right: 7px;
@@ -67,7 +69,7 @@
   .cooperation__address {
     font-size: 16px;
     color: $dark-gray;
-    font-family: "Lato", sans-serif;
+    font-family: "Lato", "Arial", sans-serif;
     font-style: normal;
     line-height: 20px;
     margin-top: -1px;
@@ -106,10 +108,36 @@
 .cooperation__map iframe {
   display: block;
   border: none;
+  width: 100%;
 }
 
 @media (min-width: $tablet-width) {
   .cooperation__map iframe {
+    height: 400px;
+  }
+}
+
+.cooperation__map img {
+  height: 362px;
+  width: 100%;
+  object-fit: fill;
+}
+
+@media (min-width: $tablet-width) {
+  .cooperation__map img {
+    height: 400px;
+  }
+}
+
+.cooperation__map-img {
+  width: 100%;
+  display: block;
+  max-height: 362px;
+  object-fit: fill;
+}
+
+@media (min-width: $tablet-width) {
+  .cooperation__map-img {
     height: 400px;
   }
 }
@@ -131,7 +159,7 @@
 
 @media (min-width: $desktop-width) {
   .main-footer_wrapper {
-    padding: 67px 110px 55px 110px;
+    padding: 67px 110px 67px 110px;
   }
 }
 
@@ -242,7 +270,7 @@
 
 .copyright__text {
   color: $dark-gray;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
