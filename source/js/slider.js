@@ -1,5 +1,5 @@
 const slider = document.querySelector('.slider__wrapper');
-const before = document.querySelector('.slider__wrapper-item--before');
+const before = document.querySelector('.slider__wrapper-before');
 const beforeImage = before.querySelector('img');
 const change = document.querySelector('.slider__toggle');
 const body = document.body;

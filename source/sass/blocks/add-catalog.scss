@@ -264,7 +264,7 @@
   }
 }
 
-.add-catalog__promo--wrapper {
+.add-catalog__promo-wrapper {
   min-height: 290px;
   background-color: $basic-green;
   background-image: url("../img/catalog/gift-background-picture@1x.webp");
@@ -290,13 +290,13 @@
 }
 
 @media (min-resolution: 2dppx) {
-  .add-catalog__promo--wrapper {
+  .add-catalog__promo-wrapper {
     background-image: url("../img/catalog/gift-background-picture@2x.webp");
   }
 }
 
 @media (min-width: $tablet-width) {
-  .add-catalog__promo--wrapper {
+  .add-catalog__promo-wrapper {
     min-height: 200px;
     min-width: 244px;
     background-image: url("../img/catalog/gift-background-picture-tablet@1x.webp");
@@ -313,13 +313,13 @@
 }
 
 @media (min-width: 768px) and (min-resolution: 2dppx) {
-  .add-catalog__promo--wrapper {
+  .add-catalog__promo-wrapper {
     background-image: url("../img/catalog/gift-background-picture-tablet@2x.webp");
   }
 }
 
 @media (min-width: $desktop-width) {
-  .add-catalog__promo--wrapper {
+  .add-catalog__promo-wrapper {
     min-height: 100%;
     background-image: url("../img/catalog/gift-background-picture@1x.webp");
 
@@ -335,7 +335,7 @@
 }
 
 @media (min-width: 1300px) and (min-resolution: 2dppx) {
-  .add-catalog__promo--wrapper {
+  .add-catalog__promo-wrapper {
     background-image: url("../img/catalog/gift-background-picture@2x.webp");
   }
 }

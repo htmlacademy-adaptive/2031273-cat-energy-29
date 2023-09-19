@@ -26,7 +26,7 @@
     margin-left: 110px;
     background-color: $basic-white;
     flex-wrap: wrap;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 }
 
@@ -103,6 +103,7 @@
 .cooperation__map {
   width: 100%;
   min-height: 362px;
+  display: none;
 }
 
 .cooperation__map iframe {
@@ -142,14 +143,14 @@
   }
 }
 
-.main-footer_wrapper {
+.main-footer__wrapper {
   background-color: #f2f2f2;
   padding: 40px 20px 40px 20px;
   text-align: center;
 }
 
 @media (min-width: $tablet-width) {
-  .main-footer_wrapper {
+  .main-footer__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -158,7 +159,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .main-footer_wrapper {
+  .main-footer__wrapper {
     padding: 67px 110px 67px 110px;
   }
 }

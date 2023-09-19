@@ -70,20 +70,20 @@
   }
 }
 
-.form__container {
+.selection__form-container {
   padding-left: 20px;
   padding-right: 20px;
 }
 
 @media (min-width: $tablet-width) {
-  .form__container {
+  .selection__form-container {
     padding-left: 70px;
     padding-right: 70px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .form__container {
+  .selection__form-container {
     padding-left: 110px;
     padding-right: 110px;
   }
@@ -158,17 +158,6 @@
     line-height: 36px;
   }
 }
-
-/* stylelint-disable */
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-}
-
-input[type=number] {
-  -moz-appearance: textfield;
-}
-/* stylelint-enable */
 
 .fields__set-personal {
   padding: 20px 0 22px 0;
@@ -295,6 +284,17 @@ input[type=number] {
   }
 }
 
+/* stylelint-disable */
+.fields__text-field[type=number]::-webkit-inner-spin-button,
+.fields__text-field[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.fields__text-field[type=number] {
+  -moz-appearance: textfield;
+}
+/* stylelint-enable */
+
 .fields__set-program {
   margin-right: -20px;
   margin-left: -20px;
@@ -354,14 +354,14 @@ input[type=number] {
 }
 
 @media (min-width: $tablet-width) {
-  .fields__set-program--wrapper {
+  .fields__set-program-wrapper {
     border: none;
     padding: 52px 20px 52px 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .fields__set-program--wrapper {
+  .fields__set-program-wrapper {
     border: none;
     padding: 20px;
     width: 100%;
@@ -369,7 +369,7 @@ input[type=number] {
 }
 
 @media (min-width: 1450px) {
-  .fields__set-program--wrapper {
+  .fields__set-program-wrapper {
     width: 50%;
   }
 }
@@ -493,13 +493,14 @@ input[type=number] {
 @media (min-width: $desktop-width) {
   .fields__set-contacts .fields__list {
     display: flex;
-    flex-wrap: nowrap;
-    gap: 80px;
+    flex-wrap: wrap;
+    column-gap: 80px;
+    row-gap: 40px;
     justify-content: space-between;
   }
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: 1500px) {
   .fields__set-contacts .fields__item {
     width: 50%;
   }
@@ -513,13 +514,27 @@ input[type=number] {
 @media (min-width: $desktop-width) {
   .fields__text-field--email {
     min-width: 494px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .fields__label--email .fields__wrapper {
+    max-width: 494px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .fields__text-field--phone {
     min-width: 472px;
+    max-width: 100%;
     padding-left: 18px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .fields__label--phone .fields__wrapper {
+    max-width: 472px;
   }
 }
 
@@ -538,7 +553,7 @@ input[type=number] {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 12px;
+  right: 15px;
 }
 
 .fields__set-contacts .fields__text-field:focus + svg {
@@ -757,7 +772,7 @@ input[type=number] {
 @media (min-width: $desktop-width) {
   .fields__set-additionally .fields__item {
     width: 20%;
-    margin-bottom: 0;
+    margin-bottom: 45px;
   }
 }
 
@@ -785,7 +800,6 @@ input[type=number] {
 
 @media (min-width: $desktop-width) {
   .fields__button-container {
-    margin-top: 45px;
     padding-bottom: 81px;
   }
 }

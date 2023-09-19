@@ -246,7 +246,7 @@
     position: absolute;
     content: "";
     width: 32px;
-    height: 10px;
+    height: 12px;
     top: 50%;
     right: 2px;
     transform: translateY(calc(-50% - 2px));
@@ -269,4 +269,8 @@
   .programs-list__item-link {
     margin-top: -2px;
   }
+}
+
+.programs-list__item-link:hover::after {
+  background-image: url("../img/sprite.svg#icon-arrow-big");
 }
