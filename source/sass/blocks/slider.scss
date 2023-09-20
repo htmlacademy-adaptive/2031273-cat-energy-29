@@ -1,0 +1,24 @@
+.slider {
+  text-align: center;
+  max-width: 280px;
+  margin: 0 auto;
+  min-height: 256px;
+}
+
+@media (min-width: $tablet-width) {
+  .slider {
+    min-width: 560px;
+    margin-top: 102px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider {
+    margin-top: 0;
+    position: absolute;
+    top: calc(50% - 33px);
+    left: auto;
+    right: 110px;
+    transform: translateY(-50%);
+  }
+}

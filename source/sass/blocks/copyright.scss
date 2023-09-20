@@ -1,0 +1,47 @@
+.copyright__text {
+  color: $dark-gray;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  position: relative;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .copyright__text {
+    margin-right: 23px;
+  }
+}
+
+.copyright__icon {
+  mask-image: url("../img/sprite.svg#copyright-icon");
+  background-color: #666666;
+  width: 27px;
+  height: 34px;
+
+  &:hover {
+    background-color: $basic-green;
+  }
+
+  &:focus {
+    background-color: $basic-green;
+  }
+
+  &:active {
+    background-color: $basic-green;
+    opacity: 0.6;
+  }
+}

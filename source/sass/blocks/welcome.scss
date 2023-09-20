@@ -43,7 +43,7 @@
       background-color: #64a83b;
       background-size: cover;
       background-repeat: no-repeat;
-      background-position: center left;
+      background-position: 100px;
       position: absolute;
       width: 50%;
       height: 100%;
@@ -76,7 +76,7 @@
   .welcome__wrapper {
     text-align: left;
     margin-left: 90px;
-    padding: 37px 20px 0 29px;
+    padding: 46px 20px 0 29px;
   }
 }
 
@@ -108,7 +108,7 @@
 
 @media (min-width: $desktop-width) {
   .welcome__title {
-    margin-top: -38px;
+    margin-top: -46px;
     max-width: 470px;
     margin-right: auto;
   }
@@ -191,7 +191,7 @@
     padding: 18px 10px;
     min-width: 244px;
     position: absolute;
-    top: 268px;
+    top: 275px;
     left: 29px;
   }
 }

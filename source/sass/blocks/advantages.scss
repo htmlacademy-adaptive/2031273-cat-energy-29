@@ -50,7 +50,7 @@
   }
 }
 
-.advantages__list--item {
+.advantages__list-item {
   position: relative;
   min-height: 60px;
 
@@ -78,7 +78,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .advantages__list--item {
+  .advantages__list-item {
     display: flex;
     flex-direction: column;
     padding: 151px 0 0 0;
@@ -100,7 +100,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .advantages__list--item {
+  .advantages__list-item {
     display: flex;
     flex-direction: column;
     padding: 151px 0 0 0;
@@ -108,29 +108,29 @@
   }
 }
 
-.advantages__list--item:not(:last-child) {
+.advantages__list-item:not(:last-child) {
   margin-bottom: 21px;
 }
 
 @media (min-width: $tablet-width) {
-  .advantages__list--item:not(:last-child) {
+  .advantages__list-item:not(:last-child) {
     margin-bottom: 0;
   }
 }
 
-.advantages__description--powder {
+.advantages__description-powder {
   &::after {
     background-image: url("../img/sprite.svg#icon-powder");
   }
 }
 
-.advantages__description--replace {
+.advantages__description-replace {
   &::after {
     background-image: url("../img/sprite.svg#icon-eat");
   }
 }
 
-.advantages__description--month {
+.advantages__description-month {
   &::after {
     background-image: url("../img/sprite.svg#icon-time");
   }
@@ -191,28 +191,28 @@
 }
 
 @media (min-width: $tablet-width) {
-  .advantages__description--powder .advantages__decorative {
+  .advantages__description-powder .advantages__decorative {
     width: 134px;
     height: 280px;
   }
 }
 
 @media (min-width: $tablet-width) {
-  .advantages__description--replace .advantages__decorative {
+  .advantages__description-replace .advantages__decorative {
     width: 134px;
     height: 280px;
   }
 }
 
 @media (min-width: $tablet-width) {
-  .advantages__description--month .advantages__decorative {
+  .advantages__description-month .advantages__decorative {
     width: 136px;
     height: 280px;
   }
 }
 
 @media (min-width: $tablet-width) {
-  .advantages__description--month span {
+  .advantages__description-month span {
     display: block;
   }
 }
