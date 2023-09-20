@@ -242,8 +242,9 @@
 @media (min-width: $desktop-width) {
   .product-card--empty .product-card__button {
     &:hover {
-      background-color: #EBEBEB;
+      background-color: #ebebeb;
     }
+
     &:active {
       opacity: 0.6;
       color: #444444;
