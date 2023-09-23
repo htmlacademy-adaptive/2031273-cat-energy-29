@@ -1,6 +1,6 @@
 let headerOpened = document.querySelector('.main-header');
 let navMain = document.querySelector('.main-header__menu');
-let navToggle = document.querySelector('.menu__toggle');
+let navToggle = document.querySelector('.main-header__toggle');
 let map = document.querySelector('.cooperation__map');
 
 document.addEventListener('DOMContentLoaded', function() {
